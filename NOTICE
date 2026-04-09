@@ -1,0 +1,174 @@
+Tapaya Accept SDK for Android
+Copyright 2026 Tapaya
+
+This product includes software developed by third parties.
+The following sets out attributions for those components.
+
+================================================================================
+AndroidX (Core KTX, Activity, Lifecycle, Room, CameraX, Compose UI,
+          Material3, AppCompat)
+================================================================================
+Copyright The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+Kotlin Standard Library
+================================================================================
+Copyright 2010–2024 JetBrains s.r.o. and Kotlin Programming Language contributors
+
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+Retrofit (com.squareup.retrofit2:retrofit, com.squareup.retrofit2:converter-gson)
+================================================================================
+Copyright 2013 Square, Inc.
+
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+OkHttp
+================================================================================
+Copyright 2019 Square, Inc.
+
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+Gson
+================================================================================
+Copyright 2008 Google Inc.
+
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+Coil (io.coil-kt.coil3:coil-compose, io.coil-kt.coil3:coil-network-okhttp)
+================================================================================
+Copyright 2024 Coil Contributors
+
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+compose-qr-code (com.lightspark:compose-qr-code)
+================================================================================
+Copyright Lightspark Technologies, Inc.
+
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+Google Material Components for Android
+(com.google.android.material:material)
+================================================================================
+Copyright Google LLC
+
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+Stripe Terminal Android SDK
+(com.stripe:stripeterminal-core, com.stripe:stripeterminal-taptopay)
+================================================================================
+Copyright Stripe, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+Stripe Connect Android SDK (com.stripe:connect)
+================================================================================
+Copyright Stripe, Inc.
+
+Licensed under the MIT License (see Stripe Terminal entry above for terms).
+
+================================================================================
+Sentry Android SDK (io.sentry:sentry-android)
+================================================================================
+Copyright 2019 Sentry (sentry.io) and individual contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+Java-JWT (com.auth0:java-jwt)
+================================================================================
+Copyright 2015 Auth0, Inc. <support@auth0.com> (http://auth0.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+qrose (io.github.alexzhirkevich:qrose)
+================================================================================
+Copyright 2023 Alex Zhirkevich
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
