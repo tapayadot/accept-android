@@ -451,14 +451,6 @@ $dokka.location:com.tapaya.core.model.internal/TransactionType///PointingToDecla
 $dokka.location:com.tapaya.core.model.internal/TransactionType/entries/#/PointingToDeclaration/accept/com.tapaya.core.model.internal/-transaction-type/entries.html
 $dokka.location:com.tapaya.core.model.internal/TransactionType/valueOf/#kotlin.String/PointingToDeclaration/accept/com.tapaya.core.model.internal/-transaction-type/value-of.html
 $dokka.location:com.tapaya.core.model.internal/TransactionType/values/#/PointingToDeclaration/accept/com.tapaya.core.model.internal/-transaction-type/values.html
-$dokka.location:com.tapaya.core.ui.common////PointingToDeclaration/accept/com.tapaya.core.ui.common/index.html
-$dokka.location:com.tapaya.core.ui.common//ReceiptView/#kotlin.String?#com.tapaya.core.model.external.UiConfigurationData?#kotlin.Function0[kotlin.Unit]#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/accept/com.tapaya.core.ui.common/-receipt-view.html
-$dokka.location:com.tapaya.core.util////PointingToDeclaration/accept/com.tapaya.core.util/index.html
-$dokka.location:com.tapaya.core.util/ReceiptPrinter///PointingToDeclaration/accept/com.tapaya.core.util/-receipt-printer/index.html
-$dokka.location:com.tapaya.core.util/ReceiptPrinter/ReceiptPrinter/#kotlin.Int#com.tapaya.core.model.external.ICurrency#com.tapaya.core.model.external.result.AbstractPaymentResult?#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/accept/com.tapaya.core.util/-receipt-printer/-receipt-printer.html
-$dokka.location:com.tapaya.core.util/ReceiptPrinter/generateAndShareReceipt/#android.content.Context/PointingToDeclaration/accept/com.tapaya.core.util/-receipt-printer/generate-and-share-receipt.html
-$dokka.location:com.tapaya.core.util/ReceiptPrinter/generateReceipt/#android.content.Context/PointingToDeclaration/accept/com.tapaya.core.util/-receipt-printer/generate-receipt.html
-$dokka.location:com.tapaya.core.util/ReceiptPrinter/shareFile/#android.content.Context#java.io.File/PointingToDeclaration/accept/com.tapaya.core.util/-receipt-printer/share-file.html
 com.tapaya.accept
 com.tapaya.accept.executor
 com.tapaya.accept.external
@@ -468,5 +460,3 @@ com.tapaya.core.model.external.intent
 com.tapaya.core.model.external.result
 com.tapaya.core.model.external.status
 com.tapaya.core.model.internal
-com.tapaya.core.ui.common
-com.tapaya.core.util
