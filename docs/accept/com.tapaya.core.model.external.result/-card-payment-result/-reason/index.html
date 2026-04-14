@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Reason</title>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    accept
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+3        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":accept/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":accept/main"
+                                       data-filter=":accept/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    accept
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="accept::com.tapaya.core.model.external.result/CardPaymentResult.Reason///PointingToDeclaration//-1978564639">
+  <div class="breadcrumbs"><a href="../../../../index.html">accept</a><span class="delimiter">/</span><a href="../../index.html">com.tapaya.core.model.external.result</a><span class="delimiter">/</span><a href="../index.html">CardPaymentResult</a><span class="delimiter">/</span><span class="current">Reason</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Reason</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">Reason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="index.html">CardPaymentResult.Reason</a><span class="token operator">&gt; </span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="tableheader">Entries</h2>
+        <div class="table"><a data-name="-748900781%2FClasslikes%2F-1978564639" anchor-label="AUTHENTICATION_REQUIRED" id="-748900781%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-u-t-h-e-n-t-i-c-a-t-i-o-n_-r-e-q-u-i-r-e-d/index.html">AUTHENTICATION_REQUIRED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-748900781%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-a-u-t-h-e-n-t-i-c-a-t-i-o-n_-r-e-q-u-i-r-e-d/index.html">AUTHENTICATION_REQUIRED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="88858863%2FClasslikes%2F-1978564639" anchor-label="APPROVE_WITH_ID" id="88858863%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-p-p-r-o-v-e_-w-i-t-h_-i-d/index.html">APPROVE_WITH_ID</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="88858863%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-a-p-p-r-o-v-e_-w-i-t-h_-i-d/index.html">APPROVE_WITH_ID</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="453793543%2FClasslikes%2F-1978564639" anchor-label="CALL_ISSUER" id="453793543%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-l-l_-i-s-s-u-e-r/index.html">CALL_ISSUER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="453793543%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-c-a-l-l_-i-s-s-u-e-r/index.html">CALL_ISSUER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2115003406%2FClasslikes%2F-1978564639" anchor-label="CARD_NOT_SUPPORTED" id="2115003406%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-r-d_-n-o-t_-s-u-p-p-o-r-t-e-d/index.html">CARD_NOT_SUPPORTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2115003406%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-c-a-r-d_-n-o-t_-s-u-p-p-o-r-t-e-d/index.html">CARD_NOT_SUPPORTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1319239489%2FClasslikes%2F-1978564639" anchor-label="CARD_VELOCITY_EXCEEDED" id="1319239489%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-r-d_-v-e-l-o-c-i-t-y_-e-x-c-e-e-d-e-d/index.html">CARD_VELOCITY_EXCEEDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1319239489%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-c-a-r-d_-v-e-l-o-c-i-t-y_-e-x-c-e-e-d-e-d/index.html">CARD_VELOCITY_EXCEEDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-463037425%2FClasslikes%2F-1978564639" anchor-label="CURRENCY_NOT_SUPPORTED" id="-463037425%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-u-r-r-e-n-c-y_-n-o-t_-s-u-p-p-o-r-t-e-d/index.html">CURRENCY_NOT_SUPPORTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-463037425%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-c-u-r-r-e-n-c-y_-n-o-t_-s-u-p-p-o-r-t-e-d/index.html">CURRENCY_NOT_SUPPORTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1773756677%2FClasslikes%2F-1978564639" anchor-label="DO_NOT_HONOR" id="1773756677%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-o_-n-o-t_-h-o-n-o-r/index.html">DO_NOT_HONOR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1773756677%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-d-o_-n-o-t_-h-o-n-o-r/index.html">DO_NOT_HONOR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2028966231%2FClasslikes%2F-1978564639" anchor-label="DO_NOT_TRY_AGAIN" id="2028966231%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-o_-n-o-t_-t-r-y_-a-g-a-i-n/index.html">DO_NOT_TRY_AGAIN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2028966231%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-d-o_-n-o-t_-t-r-y_-a-g-a-i-n/index.html">DO_NOT_TRY_AGAIN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="438533495%2FClasslikes%2F-1978564639" anchor-label="DUPLICATE_TRANSACTION" id="438533495%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-u-p-l-i-c-a-t-e_-t-r-a-n-s-a-c-t-i-o-n/index.html">DUPLICATE_TRANSACTION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="438533495%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-d-u-p-l-i-c-a-t-e_-t-r-a-n-s-a-c-t-i-o-n/index.html">DUPLICATE_TRANSACTION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="526053381%2FClasslikes%2F-1978564639" anchor-label="EXPIRED_CARD" id="526053381%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-x-p-i-r-e-d_-c-a-r-d/index.html">EXPIRED_CARD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="526053381%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-e-x-p-i-r-e-d_-c-a-r-d/index.html">EXPIRED_CARD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1437707701%2FClasslikes%2F-1978564639" anchor-label="FRAUDULENT" id="-1437707701%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-r-a-u-d-u-l-e-n-t/index.html">FRAUDULENT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1437707701%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-f-r-a-u-d-u-l-e-n-t/index.html">FRAUDULENT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1751367653%2FClasslikes%2F-1978564639" anchor-label="GENERIC_DECLINE" id="-1751367653%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-e-n-e-r-i-c_-d-e-c-l-i-n-e/index.html">GENERIC_DECLINE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1751367653%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-g-e-n-e-r-i-c_-d-e-c-l-i-n-e/index.html">GENERIC_DECLINE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-850219010%2FClasslikes%2F-1978564639" anchor-label="INCORRECT_NUMBER" id="-850219010%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-c-o-r-r-e-c-t_-n-u-m-b-e-r/index.html">INCORRECT_NUMBER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-850219010%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-c-o-r-r-e-c-t_-n-u-m-b-e-r/index.html">INCORRECT_NUMBER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1988227715%2FClasslikes%2F-1978564639" anchor-label="INCORRECT_CVC" id="1988227715%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-c-o-r-r-e-c-t_-c-v-c/index.html">INCORRECT_CVC</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1988227715%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-c-o-r-r-e-c-t_-c-v-c/index.html">INCORRECT_CVC</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-615391480%2FClasslikes%2F-1978564639" anchor-label="INCORRECT_PIN" id="-615391480%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-c-o-r-r-e-c-t_-p-i-n/index.html">INCORRECT_PIN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-615391480%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-c-o-r-r-e-c-t_-p-i-n/index.html">INCORRECT_PIN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1495189612%2FClasslikes%2F-1978564639" anchor-label="INCORRECT_ZIP" id="-1495189612%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-c-o-r-r-e-c-t_-z-i-p/index.html">INCORRECT_ZIP</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1495189612%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-c-o-r-r-e-c-t_-z-i-p/index.html">INCORRECT_ZIP</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1058064301%2FClasslikes%2F-1978564639" anchor-label="INSUFFICIENT_FUNDS" id="1058064301%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-s-u-f-f-i-c-i-e-n-t_-f-u-n-d-s/index.html">INSUFFICIENT_FUNDS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1058064301%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-s-u-f-f-i-c-i-e-n-t_-f-u-n-d-s/index.html">INSUFFICIENT_FUNDS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1667737906%2FClasslikes%2F-1978564639" anchor-label="INVALID_ACCOUNT" id="1667737906%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-a-c-c-o-u-n-t/index.html">INVALID_ACCOUNT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1667737906%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-a-c-c-o-u-n-t/index.html">INVALID_ACCOUNT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="165734267%2FClasslikes%2F-1978564639" anchor-label="INVALID_AMOUNT" id="165734267%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-a-m-o-u-n-t/index.html">INVALID_AMOUNT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="165734267%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-a-m-o-u-n-t/index.html">INVALID_AMOUNT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1437276523%2FClasslikes%2F-1978564639" anchor-label="INVALID_CVC" id="-1437276523%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-c-v-c/index.html">INVALID_CVC</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1437276523%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-c-v-c/index.html">INVALID_CVC</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-908683465%2FClasslikes%2F-1978564639" anchor-label="INVALID_EXPIRY_MONTH" id="-908683465%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-e-x-p-i-r-y_-m-o-n-t-h/index.html">INVALID_EXPIRY_MONTH</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-908683465%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-e-x-p-i-r-y_-m-o-n-t-h/index.html">INVALID_EXPIRY_MONTH</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="360550766%2FClasslikes%2F-1978564639" anchor-label="INVALID_EXPIRY_YEAR" id="360550766%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-e-x-p-i-r-y_-y-e-a-r/index.html">INVALID_EXPIRY_YEAR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="360550766%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-e-x-p-i-r-y_-y-e-a-r/index.html">INVALID_EXPIRY_YEAR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1624020308%2FClasslikes%2F-1978564639" anchor-label="INVALID_NUMBER" id="-1624020308%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-n-u-m-b-e-r/index.html">INVALID_NUMBER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1624020308%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-n-u-m-b-e-r/index.html">INVALID_NUMBER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="254071578%2FClasslikes%2F-1978564639" anchor-label="INVALID_PIN" id="254071578%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-p-i-n/index.html">INVALID_PIN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="254071578%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-p-i-n/index.html">INVALID_PIN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1103287634%2FClasslikes%2F-1978564639" anchor-label="ISSUER_NOT_AVAILABLE" id="1103287634%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-s-s-u-e-r_-n-o-t_-a-v-a-i-l-a-b-l-e/index.html">ISSUER_NOT_AVAILABLE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1103287634%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-i-s-s-u-e-r_-n-o-t_-a-v-a-i-l-a-b-l-e/index.html">ISSUER_NOT_AVAILABLE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1681258216%2FClasslikes%2F-1978564639" anchor-label="LOST_CARD" id="-1681258216%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-o-s-t_-c-a-r-d/index.html">LOST_CARD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1681258216%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-l-o-s-t_-c-a-r-d/index.html">LOST_CARD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="197772545%2FClasslikes%2F-1978564639" anchor-label="MERCHANT_BLACKLIST" id="197772545%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-e-r-c-h-a-n-t_-b-l-a-c-k-l-i-s-t/index.html">MERCHANT_BLACKLIST</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="197772545%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-m-e-r-c-h-a-n-t_-b-l-a-c-k-l-i-s-t/index.html">MERCHANT_BLACKLIST</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1364462930%2FClasslikes%2F-1978564639" anchor-label="NEW_ACCOUNT_INFORMATION_AVAILABLE" id="1364462930%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-e-w_-a-c-c-o-u-n-t_-i-n-f-o-r-m-a-t-i-o-n_-a-v-a-i-l-a-b-l-e/index.html">NEW_ACCOUNT_INFORMATION_AVAILABLE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1364462930%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-n-e-w_-a-c-c-o-u-n-t_-i-n-f-o-r-m-a-t-i-o-n_-a-v-a-i-l-a-b-l-e/index.html">NEW_ACCOUNT_INFORMATION_AVAILABLE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1744080279%2FClasslikes%2F-1978564639" anchor-label="NO_ACTION_TAKEN" id="-1744080279%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-o_-a-c-t-i-o-n_-t-a-k-e-n/index.html">NO_ACTION_TAKEN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1744080279%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-n-o_-a-c-t-i-o-n_-t-a-k-e-n/index.html">NO_ACTION_TAKEN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="695115001%2FClasslikes%2F-1978564639" anchor-label="NOT_PERMITTED" id="695115001%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-o-t_-p-e-r-m-i-t-t-e-d/index.html">NOT_PERMITTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="695115001%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-n-o-t_-p-e-r-m-i-t-t-e-d/index.html">NOT_PERMITTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1177685984%2FClasslikes%2F-1978564639" anchor-label="OFFLINE_PIN_REQUIRED" id="1177685984%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-f-f-l-i-n-e_-p-i-n_-r-e-q-u-i-r-e-d/index.html">OFFLINE_PIN_REQUIRED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1177685984%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-o-f-f-l-i-n-e_-p-i-n_-r-e-q-u-i-r-e-d/index.html">OFFLINE_PIN_REQUIRED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="630517888%2FClasslikes%2F-1978564639" anchor-label="PICKUP_CARD" id="630517888%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-i-c-k-u-p_-c-a-r-d/index.html">PICKUP_CARD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="630517888%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-p-i-c-k-u-p_-c-a-r-d/index.html">PICKUP_CARD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="926620220%2FClasslikes%2F-1978564639" anchor-label="PIN_TRY_EXCEEDED" id="926620220%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-i-n_-t-r-y_-e-x-c-e-e-d-e-d/index.html">PIN_TRY_EXCEEDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="926620220%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-p-i-n_-t-r-y_-e-x-c-e-e-d-e-d/index.html">PIN_TRY_EXCEEDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1744351927%2FClasslikes%2F-1978564639" anchor-label="PROCESSING_ERROR" id="1744351927%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-c-e-s-s-i-n-g_-e-r-r-o-r/index.html">PROCESSING_ERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1744351927%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-p-r-o-c-e-s-s-i-n-g_-e-r-r-o-r/index.html">PROCESSING_ERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="756844209%2FClasslikes%2F-1978564639" anchor-label="REENTER_TRANSACTION" id="756844209%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-e-n-t-e-r_-t-r-a-n-s-a-c-t-i-o-n/index.html">REENTER_TRANSACTION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="756844209%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-r-e-e-n-t-e-r_-t-r-a-n-s-a-c-t-i-o-n/index.html">REENTER_TRANSACTION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-516495935%2FClasslikes%2F-1978564639" anchor-label="RESTRICTED_CARD" id="-516495935%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-s-t-r-i-c-t-e-d_-c-a-r-d/index.html">RESTRICTED_CARD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516495935%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-r-e-s-t-r-i-c-t-e-d_-c-a-r-d/index.html">RESTRICTED_CARD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1892500774%2FClasslikes%2F-1978564639" anchor-label="REVOCATION_OF_ALL_AUTHORIZATIONS" id="-1892500774%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-v-o-c-a-t-i-o-n_-o-f_-a-l-l_-a-u-t-h-o-r-i-z-a-t-i-o-n-s/index.html">REVOCATION_OF_ALL_AUTHORIZATIONS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1892500774%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-r-e-v-o-c-a-t-i-o-n_-o-f_-a-l-l_-a-u-t-h-o-r-i-z-a-t-i-o-n-s/index.html">REVOCATION_OF_ALL_AUTHORIZATIONS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-941944385%2FClasslikes%2F-1978564639" anchor-label="REVOCATION_OF_AUTHORIZATION" id="-941944385%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-v-o-c-a-t-i-o-n_-o-f_-a-u-t-h-o-r-i-z-a-t-i-o-n/index.html">REVOCATION_OF_AUTHORIZATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-941944385%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-r-e-v-o-c-a-t-i-o-n_-o-f_-a-u-t-h-o-r-i-z-a-t-i-o-n/index.html">REVOCATION_OF_AUTHORIZATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-787049343%2FClasslikes%2F-1978564639" anchor-label="SECURITY_VIOLATION" id="-787049343%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-c-u-r-i-t-y_-v-i-o-l-a-t-i-o-n/index.html">SECURITY_VIOLATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-787049343%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-s-e-c-u-r-i-t-y_-v-i-o-l-a-t-i-o-n/index.html">SECURITY_VIOLATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-714251873%2FClasslikes%2F-1978564639" anchor-label="SERVICE_NOT_ALLOWED" id="-714251873%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-r-v-i-c-e_-n-o-t_-a-l-l-o-w-e-d/index.html">SERVICE_NOT_ALLOWED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-714251873%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-s-e-r-v-i-c-e_-n-o-t_-a-l-l-o-w-e-d/index.html">SERVICE_NOT_ALLOWED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1168107019%2FClasslikes%2F-1978564639" anchor-label="STOLEN_CARD" id="-1168107019%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-o-l-e-n_-c-a-r-d/index.html">STOLEN_CARD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1168107019%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-s-t-o-l-e-n_-c-a-r-d/index.html">STOLEN_CARD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1993232301%2FClasslikes%2F-1978564639" anchor-label="STOP_PAYMENT_ORDER" id="-1993232301%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-o-p_-p-a-y-m-e-n-t_-o-r-d-e-r/index.html">STOP_PAYMENT_ORDER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1993232301%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-s-t-o-p_-p-a-y-m-e-n-t_-o-r-d-e-r/index.html">STOP_PAYMENT_ORDER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1772601864%2FClasslikes%2F-1978564639" anchor-label="TRANSACTION_NOT_ALLOWED" id="1772601864%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-a-n-s-a-c-t-i-o-n_-n-o-t_-a-l-l-o-w-e-d/index.html">TRANSACTION_NOT_ALLOWED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1772601864%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-t-r-a-n-s-a-c-t-i-o-n_-n-o-t_-a-l-l-o-w-e-d/index.html">TRANSACTION_NOT_ALLOWED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-396178794%2FClasslikes%2F-1978564639" anchor-label="TRY_AGAIN_LATER" id="-396178794%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-y_-a-g-a-i-n_-l-a-t-e-r/index.html">TRY_AGAIN_LATER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-396178794%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-t-r-y_-a-g-a-i-n_-l-a-t-e-r/index.html">TRY_AGAIN_LATER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1493562210%2FClasslikes%2F-1978564639" anchor-label="WITHDRAWAL_COUNT_LIMIT_EXCEEDED" id="-1493562210%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-i-t-h-d-r-a-w-a-l_-c-o-u-n-t_-l-i-m-i-t_-e-x-c-e-e-d-e-d/index.html">WITHDRAWAL_COUNT_LIMIT_EXCEEDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1493562210%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-w-i-t-h-d-r-a-w-a-l_-c-o-u-n-t_-l-i-m-i-t_-e-x-c-e-e-d-e-d/index.html">WITHDRAWAL_COUNT_LIMIT_EXCEEDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="403477925%2FClasslikes%2F-1978564639" anchor-label="LOCATION_PERMISSIONS_NOT_GRANTED" id="403477925%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-o-c-a-t-i-o-n_-p-e-r-m-i-s-s-i-o-n-s_-n-o-t_-g-r-a-n-t-e-d/index.html">LOCATION_PERMISSIONS_NOT_GRANTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="403477925%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-l-o-c-a-t-i-o-n_-p-e-r-m-i-s-s-i-o-n-s_-n-o-t_-g-r-a-n-t-e-d/index.html">LOCATION_PERMISSIONS_NOT_GRANTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1716578477%2FClasslikes%2F-1978564639" anchor-label="LOCATION_DISABLED" id="-1716578477%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-o-c-a-t-i-o-n_-d-i-s-a-b-l-e-d/index.html">LOCATION_DISABLED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1716578477%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><div class="block"><a href="-l-o-c-a-t-i-o-n_-d-i-s-a-b-l-e-d/index.html">LOCATION_DISABLED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1528095148%2FClasslikes%2F-1978564639" anchor-label="Companion" id="1528095148%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1528095148%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1473501141%2FProperties%2F-1978564639" anchor-label="entries" id="1473501141%2FProperties%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="entries.html"><span><span>entries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1473501141%2FProperties%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="entries.html">entries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.enums/-enum-entries/index.html">EnumEntries</a><span class="token operator">&lt;</span><a href="index.html">CardPaymentResult.Reason</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a representation of an immutable list of all enum entries, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372974862%2FProperties%2F-1978564639" anchor-label="name" id="-372974862%2FProperties%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../com.tapaya.core.model.internal/-transaction-type/-r-e-f-u-n-d/index.html#-372974862%2FProperties%2F-1978564639"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../../com.tapaya.core.model.internal/-transaction-type/-r-e-f-u-n-d/index.html#-372974862%2FProperties%2F-1978564639">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F-1978564639" anchor-label="ordinal" id="-739389684%2FProperties%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../com.tapaya.core.model.internal/-transaction-type/-r-e-f-u-n-d/index.html#-739389684%2FProperties%2F-1978564639"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../../com.tapaya.core.model.internal/-transaction-type/-r-e-f-u-n-d/index.html#-739389684%2FProperties%2F-1978564639">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1723213799%2FFunctions%2F-1978564639" anchor-label="valueOf" id="1723213799%2FFunctions%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1723213799%2FFunctions%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardPaymentResult.Reason</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-444021453%2FFunctions%2F-1978564639" anchor-label="values" id="-444021453%2FFunctions%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-444021453%2FFunctions%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">CardPaymentResult.Reason</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
