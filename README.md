@@ -12,7 +12,7 @@ Add the Tapaya Maven repository and the dependency to your project:
 // settings.gradle.kts
 dependencyResolutionManagement {
     repositories {
-        maven("https://maven.tapaya.com/releases")
+        maven("https://maven.pkg.github.com/tapayadot/accept-android")
     }
 }
 ```
