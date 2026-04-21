@@ -38,12 +38,12 @@ $dokka.location:com.tapaya.accept/AcceptSDK/cryptoTerminal/#/PointingToDeclarati
 $dokka.location:com.tapaya.accept/AcceptSDK/getPaymentStatus/#kotlin.String#kotlin.Function1[com.tapaya.core.model.external.result.AbstractPaymentResult,kotlin.Unit]#kotlin.Function1[com.tapaya.core.model.external.exception.AcceptSDKException,kotlin.Unit]/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/get-payment-status.html
 $dokka.location:com.tapaya.accept/AcceptSDK/helper/#/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/helper.html
 $dokka.location:com.tapaya.accept/AcceptSDK/identity/#/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/identity.html
-$dokka.location:com.tapaya.accept/AcceptSDK/initialize/#android.content.Context#com.tapaya.core.model.external.AcceptEnvironment/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/initialize.html
-$dokka.location:com.tapaya.accept/AcceptSDK/initialize/#android.content.Context#kotlin.Boolean/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/initialize.html
+$dokka.location:com.tapaya.accept/AcceptSDK/initialize/#android.content.Context#com.tapaya.core.model.external.AcceptEnvironment#com.tapaya.core.ui.theme.AcceptThemeConfiguration/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/initialize.html
+$dokka.location:com.tapaya.accept/AcceptSDK/initialize/#android.content.Context#kotlin.Boolean#com.tapaya.core.ui.theme.AcceptThemeConfiguration/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/initialize.html
 $dokka.location:com.tapaya.accept/AcceptSDK/isPaymentPending/#/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/is-payment-pending.html
 $dokka.location:com.tapaya.accept/AcceptSDK/logOut/#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/log-out.html
 $dokka.location:com.tapaya.accept/AcceptSDK/sepaTerminal/#/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/sepa-terminal.html
-$dokka.location:com.tapaya.accept/AcceptSDK/setUiConfiguration/#com.tapaya.core.model.external.UiConfigurationData/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/set-ui-configuration.html
+$dokka.location:com.tapaya.accept/AcceptSDK/setThemeConfiguration/#com.tapaya.core.ui.theme.AcceptThemeConfiguration/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/set-theme-configuration.html
 $dokka.location:com.tapaya.accept/AcceptSDK/status/#/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k/status.html
 $dokka.location:com.tapaya.accept/AcceptSDKInstance///PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k-instance/index.html
 $dokka.location:com.tapaya.accept/AcceptSDKInstance/process/#TypeParam(bounds=[com.tapaya.core.model.external.intent.AbstractPaymentIntent])#kotlin.Function1[TypeParam(bounds=[com.tapaya.core.model.external.result.AbstractPaymentResult]),kotlin.Unit]#kotlin.Function1[TypeParam(bounds=[kotlin.Enum[*]]),kotlin.Unit]#kotlin.Function1[com.tapaya.core.model.external.exception.AcceptSDKException,kotlin.Unit]/PointingToDeclaration/accept/com.tapaya.accept/-accept-s-d-k-instance/process.html
@@ -429,21 +429,6 @@ $dokka.location:com.tapaya.core.model.external/PaymentMethod///PointingToDeclara
 $dokka.location:com.tapaya.core.model.external/PaymentMethod/entries/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-payment-method/entries.html
 $dokka.location:com.tapaya.core.model.external/PaymentMethod/valueOf/#kotlin.String/PointingToDeclaration/accept/com.tapaya.core.model.external/-payment-method/value-of.html
 $dokka.location:com.tapaya.core.model.external/PaymentMethod/values/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-payment-method/values.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData///PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/index.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/UiConfigurationData/#kotlin.String?#kotlin.String?#kotlin.Boolean?#kotlin.String#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/-ui-configuration-data.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/backgroundColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/background-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/companyLogoUrl/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/company-logo-url.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/companyName/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/company-name.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/companySquareLogoBorder/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/company-square-logo-border.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/companySquareLogoUrl/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/company-square-logo-url.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/errorColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/error-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/outlineColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/outline-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/primaryColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/primary-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/secondaryColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/secondary-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/successColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/success-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/surfaceColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/surface-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/tertiaryColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/tertiary-color.html
-$dokka.location:com.tapaya.core.model.external/UiConfigurationData/warningColor/#/PointingToDeclaration/accept/com.tapaya.core.model.external/-ui-configuration-data/warning-color.html
 $dokka.location:com.tapaya.core.model.internal////PointingToDeclaration/accept/com.tapaya.core.model.internal/index.html
 $dokka.location:com.tapaya.core.model.internal/TransactionType.CHARGE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}accept/com.tapaya.core.model.internal/-transaction-type/-c-h-a-r-g-e/index.html
 $dokka.location:com.tapaya.core.model.internal/TransactionType.REFUND///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}accept/com.tapaya.core.model.internal/-transaction-type/-r-e-f-u-n-d/index.html
@@ -451,6 +436,65 @@ $dokka.location:com.tapaya.core.model.internal/TransactionType///PointingToDecla
 $dokka.location:com.tapaya.core.model.internal/TransactionType/entries/#/PointingToDeclaration/accept/com.tapaya.core.model.internal/-transaction-type/entries.html
 $dokka.location:com.tapaya.core.model.internal/TransactionType/valueOf/#kotlin.String/PointingToDeclaration/accept/com.tapaya.core.model.internal/-transaction-type/value-of.html
 $dokka.location:com.tapaya.core.model.internal/TransactionType/values/#/PointingToDeclaration/accept/com.tapaya.core.model.internal/-transaction-type/values.html
+$dokka.location:com.tapaya.core.ui.theme////PointingToDeclaration/accept/com.tapaya.core.ui.theme/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme.Companion///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/-companion/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme.Companion/Default/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/-companion/-default.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/AcceptColorTheme/#androidx.compose.ui.graphics.Color#androidx.compose.ui.graphics.Color#androidx.compose.ui.graphics.Color#androidx.compose.ui.graphics.Color#com.tapaya.core.ui.theme.GradientColors?#com.tapaya.core.ui.theme.GradientColors?/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/-accept-color-theme.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/accent/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/accent.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/background/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/background.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/brandGradient/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/brand-gradient.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/brandGradientColors/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/brand-gradient-colors.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/brandSubtleGradient/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/brand-subtle-gradient.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/brandSubtleGradientColors/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/brand-subtle-gradient-colors.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/error/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/error.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/onPrimary/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/on-primary.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/onSurface/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/on-surface.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/onSurfaceVariant/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/on-surface-variant.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/outline/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/outline.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/outlineVariant/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/outline-variant.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/primary/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/primary.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/primaryContainer/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/primary-container.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/secondary/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/secondary.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/success/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/success.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/surface/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/surface.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/surfaceVariant/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/surface-variant.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/tertiary/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/tertiary.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptColorTheme/warning/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-color-theme/warning.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Data///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-data/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Data/Data/#kotlin.ByteArray/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-data/-data.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Data/bytes/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-data/bytes.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Data/equals/#kotlin.Any?/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-data/equals.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Data/hashCode/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-data/hash-code.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Resource///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-resource/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Resource/Resource/#kotlin.Int/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-resource/-resource.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource.Resource/resId/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/-resource/res-id.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageSource///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-source/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageTheme.Companion///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-theme/-companion/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageTheme.Companion/Default/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-theme/-companion/-default.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageTheme///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-theme/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageTheme/AcceptImageTheme/#com.tapaya.core.ui.theme.AcceptImageSource#com.tapaya.core.ui.theme.AcceptImageSource#com.tapaya.core.ui.theme.AcceptImageSource/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-theme/-accept-image-theme.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageTheme/brandLogo/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-theme/brand-logo.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageTheme/solidLogo/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-theme/solid-logo.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptImageTheme/toolbarLogo/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-image-theme/toolbar-logo.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptTheme///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptTheme/colors/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme/colors.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptTheme/images/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme/images.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeConfiguration.Companion///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-configuration/-companion/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeConfiguration.Companion/Default/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-configuration/-companion/-default.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeConfiguration///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-configuration/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeConfiguration/AcceptThemeConfiguration/#com.tapaya.core.ui.theme.AcceptThemeSource[com.tapaya.core.ui.theme.AcceptColorTheme]#com.tapaya.core.ui.theme.AcceptThemeSource[com.tapaya.core.ui.theme.AcceptImageTheme]/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-configuration/-accept-theme-configuration.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeConfiguration/colors/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-configuration/colors.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeConfiguration/images/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-configuration/images.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeSource.Default///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-source/-default/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeSource.Local///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-source/-local/index.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeSource.Local/Local/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-source/-local/-local.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeSource.Local/value/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-source/-local/value.html
+$dokka.location:com.tapaya.core.ui.theme/AcceptThemeSource///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-accept-theme-source/index.html
+$dokka.location:com.tapaya.core.ui.theme/GradientColors///PointingToDeclaration/accept/com.tapaya.core.ui.theme/-gradient-colors/index.html
+$dokka.location:com.tapaya.core.ui.theme/GradientColors/GradientColors/#androidx.compose.ui.graphics.Color#androidx.compose.ui.graphics.Color/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-gradient-colors/-gradient-colors.html
+$dokka.location:com.tapaya.core.ui.theme/GradientColors/end/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-gradient-colors/end.html
+$dokka.location:com.tapaya.core.ui.theme/GradientColors/start/#/PointingToDeclaration/accept/com.tapaya.core.ui.theme/-gradient-colors/start.html
 com.tapaya.accept
 com.tapaya.accept.executor
 com.tapaya.accept.external
@@ -460,3 +504,4 @@ com.tapaya.core.model.external.intent
 com.tapaya.core.model.external.result
 com.tapaya.core.model.external.status
 com.tapaya.core.model.internal
+com.tapaya.core.ui.theme
