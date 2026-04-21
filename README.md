@@ -6,16 +6,7 @@ Android SDK for integrating Tapaya Accept payment processing into your app.
 
 ## Installation
 
-Add the Tapaya Maven repository and the dependency to your project:
-
-```kotlin
-// settings.gradle.kts
-dependencyResolutionManagement {
-    repositories {
-        maven("https://maven.pkg.github.com/tapayadot/accept-android")
-    }
-}
-```
+Add the dependency to your project:
 
 ```kotlin
 // app/build.gradle.kts
@@ -23,6 +14,8 @@ dependencies {
     implementation("com.tapaya:accept:<version>")
 }
 ```
+
+Maven Central is included by default in Android projects. No additional repository configuration is needed.
 
 ## Requirements
 
