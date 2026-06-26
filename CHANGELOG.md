@@ -13,6 +13,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.3.2] - 2026-06-26
+
+### Changed
+
+### Fixed
+- `AcceptUnknownException` is now always constructed with a message, improving error reporting.
+- Companion-app discovery now matches only `com.tapaya.accept.*` packages.
+- Removed a hardcoded demo token.
+
+## [1.3.1] - 2026-06-25
+
+### Changed
+- Updated sandbox base URL to `api.sandbox.tapaya.com`.
+- Example app rewritten to match the iOS example app flow: initialize → login (with auto-register on 401/404) → authenticate state machine, KYB, onboarding status, card status, and companion install/pair.
+
 ## [1.3.0] - 2026-06-22
 
 ### Added
@@ -27,5 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.3.0...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.3.2...HEAD
+[1.3.2]: https://github.com/tapayadot/accept-android/compare/1.3.1...1.3.2
+[1.3.1]: https://github.com/tapayadot/accept-android/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/tapayadot/accept-android/compare/1.2.4...1.3.0

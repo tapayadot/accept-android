@@ -29,7 +29,6 @@ $dokka.location:com.tapaya.accept.external/TokenProvider///PointingToDeclaration
 $dokka.location:com.tapaya.accept.external/TokenProvider/getToken/#/PointingToDeclaration/accept/com.tapaya.accept.external/-token-provider/get-token.html
 $dokka.location:com.tapaya.accept////PointingToDeclaration/accept/com.tapaya.accept/index.html
 $dokka.location:com.tapaya.accept/Accept///PointingToDeclaration/accept/com.tapaya.accept/-accept/index.html
-$dokka.location:com.tapaya.accept/Accept/DEMO_TOKEN/#/PointingToDeclaration/accept/com.tapaya.accept/-accept/-d-e-m-o_-t-o-k-e-n.html
 $dokka.location:com.tapaya.accept/Accept/activeTheme/#/PointingToDeclaration/accept/com.tapaya.accept/-accept/active-theme.html
 $dokka.location:com.tapaya.accept/Accept/authenticate/#com.tapaya.accept.external.TokenProvider#kotlin.Function0[kotlin.Unit]#kotlin.Function1[com.tapaya.core.model.external.exception.AcceptException,kotlin.Unit]/PointingToDeclaration/accept/com.tapaya.accept/-accept/authenticate.html
 $dokka.location:com.tapaya.accept/Accept/authenticate/#kotlin.String#kotlin.Function0[kotlin.Unit]#kotlin.Function1[com.tapaya.core.model.external.exception.AcceptException,kotlin.Unit]/PointingToDeclaration/accept/com.tapaya.accept/-accept/authenticate.html
