@@ -25,214 +25,133 @@ Maven Central is included by default in Android projects. No additional reposito
 
 ## Permissions
 
-Add the required permissions to your `AndroidManifest.xml`:
+The SDK merges the permissions it needs into your app automatically:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
 
-Location permission must be granted at runtime before processing payments. Use `AcceptSDK.helper` to request it.
+Location must be granted at runtime before taking a payment. Request it with the standard
+Android permission flow; if it is missing, `pay()` fails with `LocationPermissionRequired`.
 
 ## Usage
 
-### Setup
+The entire SDK is reached through the `Accept` object. A typical flow is
+**initialize → authenticate → take a payment**.
+
+### Initialize
+
+Call once, typically from `Application.onCreate`:
 
 ```kotlin
-import com.tapaya.accept.AcceptSDK
-import com.tapaya.accept.AcceptEnvironment
+import com.tapaya.accept.Accept
 
-// Initialize once at app launch (e.g. Application.onCreate)
-AcceptSDK.initialize(context, AcceptEnvironment.SANDBOX)
-
-// Authenticate with your merchant token
-AcceptSDK.authenticate(
-    token = "your-jwt-token",
-    onSuccess = { /* ready */ },
-    onError = { exception -> /* handle error */ }
-)
-
-// Or use a TokenProvider for automatic refresh (recommended for production)
-AcceptSDK.authenticate(
-    tokenProvider = object : TokenProvider {
-        override fun getToken(): String = fetchTokenFromYourBackend()
-    }
-)
-```
-
-### Register Helper in your Activity
-
-```kotlin
-class MyActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        AcceptSDK.helper.onCreate(this)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        AcceptSDK.helper.onDestroy()
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        Accept.initialize(this, isProduction = false) // false = sandbox (default)
     }
 }
 ```
 
-### Request Location Permission
+### Observe state
+
+`Accept.state` is a `StateFlow<SdkState>` that transitions through
+`Idle → Initialized → Authenticated`:
 
 ```kotlin
-AcceptSDK.helper.requestLocationPermission(
-    activity = this,
-    onLocationPermissionGranted = { /* proceed */ },
-    onLocationPermissionDenied = { /* inform user */ }
-)
-```
-
-### Card Payment (Tap-to-Pay)
-
-```kotlin
-AcceptSDK.cardTerminal.process(
-    intent = CardChargeIntent(
-        paymentIntentId = "pi_xxx",
-        amount = 1500,
-        requestedCurrency = Currency.CZK,
-        settlementCurrency = Currency.EUR
-    ),
-    onResult = { result: CardPaymentResult ->
-        when (result.status) {
-            CardPaymentStatus.APPROVED -> println("Payment approved: ${result.authorizationCode}")
-            CardPaymentStatus.DECLINED -> println("Payment declined: ${result.reason}")
-            else -> { }
-        }
-    },
-    onStatus = { status -> /* live status updates during processing */ },
-    onError = { exception -> /* handle error */ }
-)
-```
-
-### SEPA Instant Credit Transfer
-
-```kotlin
-AcceptSDK.sepaTerminal.process(
-    intent = SepaInstantPaymentIntent(
-        paymentIntentId = "pi_xxx",
-        amount = 1000,
-        requestedCurrency = Currency.EUR,
-        settlementCurrency = Currency.EUR
-    ),
-    onResult = { result: SepaInstantPaymentResult ->
-        when (result.status) {
-            SepaInstantPaymentStatus.VERIFIED -> println("Transfer verified from ${result.receivedFromIban}")
-            SepaInstantPaymentStatus.PENDING -> println("Transfer pending")
-            else -> { }
-        }
-    },
-    onStatus = { status -> },
-    onError = { exception -> }
-)
-```
-
-### Certis (Czech Instant Transfer)
-
-```kotlin
-AcceptSDK.certisTerminal.process(
-    intent = CertisInstantPaymentIntent(
-        paymentIntentId = "pi_xxx",
-        amount = 10000,
-        requestedCurrency = Currency.CZK,
-        settlementCurrency = Currency.CZK
-    ),
-    onResult = { result: CertisInstantPaymentResult ->
-        when (result.status) {
-            CertisInstantPaymentStatus.VERIFIED -> println("Transfer verified")
-            else -> { }
-        }
-    },
-    onStatus = { status -> },
-    onError = { exception -> }
-)
-```
-
-### KYB Onboarding
-
-```kotlin
-// Check identity readiness for a payment method
-AcceptSDK.identity.loadStatus(
-    paymentMethod = PaymentMethod.CARD,
-    onSuccess = { status: IdentityStatus ->
-        when (status) {
-            IdentityStatus.VERIFIED -> { /* can accept payments */ }
-            IdentityStatus.MISSING_DETAILS -> { /* launch onboarding */ }
-            else -> { }
-        }
-    },
-    onFailure = { exception -> }
-)
-
-// Launch KYB UI (optionally with prefill data)
 lifecycleScope.launch {
-    AcceptSDK.identity.presentKyb(
-        IdentityData(
-            legalName = "Acme s.r.o.",
-            businessEmail = "billing@acme.com",
-            countryCode = "CZ",
-            addressLine1 = "Václavské náměstí 1",
-            city = "Praha",
-            postalCode = "11000"
-        )
-    )
-}
-```
-
-### Session Management
-
-```kotlin
-// Check current SDK status
-val status: AcceptSDKStatus = AcceptSDK.status  // IDLE, INITIALIZED, LOGGED_IN
-
-// Check for an in-progress payment
-if (AcceptSDK.isPaymentPending()) { /* payment is ongoing */ }
-
-// Query the result of a previous payment
-AcceptSDK.getPaymentStatus(
-    paymentIntentId = "pi_xxx",
-    onResult = { result: AbstractPaymentResult -> },
-    onError = { exception -> }
-)
-
-// Log out
-AcceptSDK.logOut { /* completion */ }
-```
-
-## Error Handling
-
-All errors are delivered as `AcceptSDKException` subclasses:
-
-| Category | Examples |
-|---|---|
-| Initialization | `AcceptSDKUninitializedException`, `AcceptSDKLoginExpiredException` |
-| Permissions | `AcceptSDKLocationPermissionException`, `AcceptSDKLocationDisabledException`, `AcceptNFCDisabledException` |
-| Reader / Connection | `AcceptSDKReaderNotFoundException`, `AcceptSDKReaderBadConnectionException`, `AcceptSDKOfflineException` |
-| Transaction | `AcceptSDKOperationTimeoutException`, `AcceptSDKPaymentNotFoundException`, `AcceptSDKCancellationException` |
-| Onboarding | `AcceptSDKOnboardingException`, `AcceptSDKMissingKYBDetailsException` |
-
-```kotlin
-onError = { exception ->
-    when (exception) {
-        is AcceptSDKException.AcceptSDKLoginExpiredException -> reauthenticate()
-        is AcceptSDKException.AcceptSDKLocationPermissionException -> requestPermissions()
-        else -> showError(exception.message)
+    Accept.state.collect { state ->
+        when (state) {
+            SdkState.Idle -> {}          // not initialized yet
+            SdkState.Initialized -> {}   // ready to authenticate
+            SdkState.Authenticated -> {} // merchant + payments usable
+        }
     }
 }
 ```
+
+### Authenticate
+
+```kotlin
+try {
+    Accept.auth.authenticate("merchant_token_here")
+    // state transitions to Authenticated
+} catch (e: AcceptException) {
+    // handle failure
+}
+```
+
+### Take a payment
+
+`pay()` returns a `Flow<PaymentEvent>`; it never throws — failures arrive as
+`PaymentEvent.CreationFailed`:
+
+```kotlin
+Accept.payments.pay(amount = 1000, currency = "USD") // minor units (cents)
+    .collect { event ->
+        when (event) {
+            PaymentEvent.Creating -> {}                 // building the request
+            PaymentEvent.Launched -> {}                 // plugin UI shown
+            is PaymentEvent.Result -> event.payResult   // terminal outcome
+            is PaymentEvent.CreationFailed -> event.cause
+        }
+    }
+```
+
+## API surface
+
+All surfaces are accessed via the `Accept` object.
+
+| Surface | Access | Purpose |
+| --- | --- | --- |
+| State | `Accept.state` | Lifecycle `StateFlow<SdkState>` |
+| Auth | `Accept.auth` | `authenticate(merchantToken)` |
+| SDK config | `Accept.sdk` | `minimumAmounts()` |
+| Merchant | `Accept.merchant` | `info()`, `config()`, `onboardingStatus()`, `availableCurrencies()` |
+| Payments | `Accept.payments` | `pay(...)`, `status(token)`, `cancel(token)` |
+| Plugin | `Accept.plugin` | `isInstalled()`, `install()`, `activateTerminal()`, `status()`, `logout()` |
+
+Top-level helpers on `Accept`:
+
+- `initialize(context, isProduction)` — set up and choose environment.
+- `setDebugLoggingEnabled(enabled)` — toggle internal debug logging.
+- `clear()` — wipe local state (auth token, device id, cached config); call on logout.
+
+### Terminal activation
+
+Physical-terminal payments require a one-time terminal activation against the external
+Accept plugin app:
+
+```kotlin
+if (!Accept.plugin.isInstalled()) {
+    Accept.plugin.install() // opens the store listing
+}
+
+when (val result = Accept.plugin.activateTerminal()) {
+    ActivateTerminalResult.Success -> {}
+    ActivateTerminalResult.Canceled -> {}
+    is ActivateTerminalResult.Failed -> result.reason // ActivateTerminalFailureReason
+}
+```
+
+## Error handling
+
+Every checked failure is a subclass of the sealed `AcceptException`. Catch it broadly, or
+branch on specific cases (e.g. `NotInitialized`, `NotAuthenticated`, `SessionExpired`,
+`NoInternetConnection`, `LocationPermissionRequired`, `CurrencyNotAvailableForMerchant`,
+`AmountBelowMinimum`). Each public function documents which exceptions it can throw via
+`@throws` in its KDoc.
 
 ## Environments
 
 | Environment | Usage |
 |---|---|
-| `AcceptEnvironment.SANDBOX` | Development and testing |
-| `AcceptEnvironment.PRODUCTION` | Live payments |
+| Sandbox (`isProduction = false`) | Development and testing |
+| Production (`isProduction = true`) | Live payments |
 
 ## Documentation
 
