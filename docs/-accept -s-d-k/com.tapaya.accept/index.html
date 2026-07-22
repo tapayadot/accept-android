@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.tapaya.accept</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    Accept SDK
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":accept/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":accept/main"
+                                       data-filter=":accept/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Accept SDK
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="Accept SDK::com.tapaya.accept////PointingToDeclaration//-1978564639">
+  <div class="breadcrumbs"><a href="../../index.html">Accept SDK</a><span class="delimiter">/</span><span class="current">com.tapaya.accept</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1224099229%2FClasslikes%2F-1978564639" anchor-label="Accept" id="1224099229%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accept/index.html"><span><span>Accept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1224099229%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-accept/index.html">Accept</a></div><div class="brief "><p class="paragraph">Entry point to the Accept SDK.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1060073173%2FClasslikes%2F-1978564639" anchor-label="AcceptAuth" id="1060073173%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accept-auth/index.html"><span>Accept</span><wbr></wbr><span><span>Auth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1060073173%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-accept-auth/index.html">AcceptAuth</a></div><div class="brief "><p class="paragraph">Authentication surface for the Accept SDK.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1191793398%2FClasslikes%2F-1978564639" anchor-label="AcceptException" id="1191793398%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accept-exception/index.html"><span>Accept</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1191793398%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-accept-exception/index.html">AcceptException</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Exception.html">Exception</a></div><div class="brief "><p class="paragraph">Base type for every checked failure the Accept SDK can raise. Public SDK functions that suspend or return a result throw one of this type's subclasses on failure — see each function's <code class="lang-kotlin">@throws</code> for which ones apply.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="617210037%2FClasslikes%2F-1978564639" anchor-label="AcceptMerchant" id="617210037%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accept-merchant/index.html"><span>Accept</span><wbr></wbr><span><span>Merchant</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="617210037%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-accept-merchant/index.html">AcceptMerchant</a></div><div class="brief "><p class="paragraph">Merchant profile and onboarding surface.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="728172272%2FClasslikes%2F-1978564639" anchor-label="AcceptPayments" id="728172272%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accept-payments/index.html"><span>Accept</span><wbr></wbr><span><span>Payments</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="728172272%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-accept-payments/index.html">AcceptPayments</a></div><div class="brief "><p class="paragraph">Payments surface for launching and managing payment requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1140982614%2FClasslikes%2F-1978564639" anchor-label="AcceptPlugin" id="-1140982614%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accept-plugin/index.html"><span>Accept</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1140982614%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-accept-plugin/index.html">AcceptPlugin</a></div><div class="brief "><p class="paragraph">Accept plugin surface for interacting with physical payment terminals.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1696255083%2FClasslikes%2F-1978564639" anchor-label="AcceptSdk" id="1696255083%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-accept-sdk/index.html"><span>Accept</span><wbr></wbr><span><span>Sdk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1696255083%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-accept-sdk/index.html">AcceptSdk</a></div><div class="brief "><p class="paragraph">SDK-level configuration surface.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1246679294%2FClasslikes%2F-1978564639" anchor-label="ActivateTerminalFailureReason" id="1246679294%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-activate-terminal-failure-reason/index.html"><span>Activate</span><wbr></wbr><span>Terminal</span><wbr></wbr><span>Failure</span><wbr></wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1246679294%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-activate-terminal-failure-reason/index.html">ActivateTerminalFailureReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-activate-terminal-failure-reason/index.html">ActivateTerminalFailureReason</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Why a terminal activation attempt reported <a href="-activate-terminal-result/-failed/index.html">ActivateTerminalResult.Failed</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1957198233%2FClasslikes%2F-1978564639" anchor-label="ActivateTerminalResult" id="1957198233%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-activate-terminal-result/index.html"><span>Activate</span><wbr></wbr><span>Terminal</span><wbr></wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1957198233%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-activate-terminal-result/index.html">ActivateTerminalResult</a></div><div class="brief "><p class="paragraph">Outcome of a terminal activation flow started via <a href="-accept-plugin/activate-terminal.html">AcceptPlugin.activateTerminal</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-519443587%2FClasslikes%2F-1978564639" anchor-label="ActivationInProgress" id="-519443587%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-activation-in-progress/index.html"><span>Activation</span><wbr></wbr><span>In</span><wbr></wbr><span><span>Progress</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-519443587%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-activation-in-progress/index.html">ActivationInProgress</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-plugin/activate-terminal.html">AcceptPlugin.activateTerminal</a> when a previous call is still awaiting a result.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1616892464%2FClasslikes%2F-1978564639" anchor-label="AmountBelowMinimum" id="1616892464%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-amount-below-minimum/index.html"><span>Amount</span><wbr></wbr><span>Below</span><wbr></wbr><span><span>Minimum</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1616892464%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-amount-below-minimum/index.html">AmountBelowMinimum</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>minimum<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>currency<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/pay.html">AcceptPayments.pay</a> when the requested amount is below <span data-unresolved-link="com.tapaya.accept/AmountBelowMinimum//#kotlin.Long#kotlin.String/PointingToCallableParameters(0)/">minimum</span> for <span data-unresolved-link="com.tapaya.accept/AmountBelowMinimum//#kotlin.Long#kotlin.String/PointingToCallableParameters(1)/">currency</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1990011187%2FClasslikes%2F-1978564639" anchor-label="CurrencyNotAvailableForMerchant" id="1990011187%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-currency-not-available-for-merchant/index.html"><span>Currency</span><wbr></wbr><span>Not</span><wbr></wbr><span>Available</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Merchant</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1990011187%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-currency-not-available-for-merchant/index.html">CurrencyNotAvailableForMerchant</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>code<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/pay.html">AcceptPayments.pay</a> when <span data-unresolved-link="com.tapaya.accept/CurrencyNotAvailableForMerchant//#kotlin.String/PointingToCallableParameters(0)/">code</span> is not one of the merchant's configured currencies.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-471378946%2FClasslikes%2F-1978564639" anchor-label="InitException" id="-471378946%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-init-exception/index.html"><span>Init</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-471378946%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-init-exception/index.html">InitException</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Base type for failures raised while initializing the SDK.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1483992546%2FClasslikes%2F-1978564639" anchor-label="LocationPermissionRequired" id="1483992546%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-location-permission-required/index.html"><span>Location</span><wbr></wbr><span>Permission</span><wbr></wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1483992546%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-location-permission-required/index.html">LocationPermissionRequired</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/pay.html">AcceptPayments.pay</a> when the host app has not been granted location permission.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1741426991%2FClasslikes%2F-1978564639" anchor-label="LocationTimeout" id="-1741426991%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-location-timeout/index.html"><span>Location</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1741426991%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-location-timeout/index.html">LocationTimeout</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/pay.html">AcceptPayments.pay</a> when a device location fix could not be resolved in time.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-200219070%2FClasslikes%2F-1978564639" anchor-label="LocationUnavailable" id="-200219070%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-location-unavailable/index.html"><span>Location</span><wbr></wbr><span><span>Unavailable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-200219070%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-location-unavailable/index.html">LocationUnavailable</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/pay.html">AcceptPayments.pay</a> when no location provider on the device could produce a fix.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1432190468%2FClasslikes%2F-1978564639" anchor-label="MerchantOnboardingIncomplete" id="1432190468%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-merchant-onboarding-incomplete/index.html"><span>Merchant</span><wbr></wbr><span>Onboarding</span><wbr></wbr><span><span>Incomplete</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1432190468%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-merchant-onboarding-incomplete/index.html">MerchantOnboardingIncomplete</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>state<span class="token operator">: </span><a href="../com.tapaya.accept.domain.data/-onboarding-state/index.html">OnboardingState</a></span></span><span class="token punctuation">)</span> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-plugin/activate-terminal.html">AcceptPlugin.activateTerminal</a> when the merchant hasn't finished onboarding.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-735208955%2FClasslikes%2F-1978564639" anchor-label="NoInternetConnection" id="-735208955%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-no-internet-connection/index.html"><span>No</span><wbr></wbr><span>Internet</span><wbr></wbr><span><span>Connection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-735208955%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-no-internet-connection/index.html">NoInternetConnection</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown when a backend call fails because the device has no network connectivity.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1880715273%2FClasslikes%2F-1978564639" anchor-label="NotAuthenticated" id="1880715273%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-not-authenticated/index.html"><span>Not</span><wbr></wbr><span><span>Authenticated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1880715273%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-not-authenticated/index.html">NotAuthenticated</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown when an SDK call requires <a href="-accept-auth/authenticate.html">AcceptAuth.authenticate</a> to have completed first, but it hasn't.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1905791292%2FClasslikes%2F-1978564639" anchor-label="NotInitialized" id="-1905791292%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-not-initialized/index.html"><span>Not</span><wbr></wbr><span><span>Initialized</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1905791292%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-not-initialized/index.html">NotInitialized</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown when an SDK call requires <a href="-accept/initialize.html">Accept.initialize</a> to have been called first, but it wasn't.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-463436069%2FClasslikes%2F-1978564639" anchor-label="PaymentCreationFailed" id="-463436069%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-creation-failed/index.html"><span>Payment</span><wbr></wbr><span>Creation</span><wbr></wbr><span><span>Failed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-463436069%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-payment-creation-failed/index.html">PaymentCreationFailed</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph"><span data-unresolved-link="com.tapaya.accept/PaymentCreationFailed//#kotlin.Throwable/PointingToCallableParameters(0)/">cause</span> is the underlying error — safe to forward to your own crash reporting, but don't surface <span data-unresolved-link="com.tapaya.accept/PaymentCreationFailed//#kotlin.Throwable/PointingToCallableParameters(0)/">cause</span>'s message directly in end-user-facing UI; it may contain internal/backend detail not meant for display.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-207525851%2FClasslikes%2F-1978564639" anchor-label="PaymentInProgress" id="-207525851%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-in-progress/index.html"><span>Payment</span><wbr></wbr><span>In</span><wbr></wbr><span><span>Progress</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-207525851%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-payment-in-progress/index.html">PaymentInProgress</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/pay.html">AcceptPayments.pay</a> when a previous call is still awaiting a result.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1530530232%2FClasslikes%2F-1978564639" anchor-label="PaymentNotFound" id="-1530530232%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-not-found/index.html"><span>Payment</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Found</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1530530232%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-payment-not-found/index.html">PaymentNotFound</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/status.html">AcceptPayments.status</a> and <a href="-accept-payments/cancel.html">AcceptPayments.cancel</a> when the payment token is unknown to the backend.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1804042149%2FClasslikes%2F-1978564639" anchor-label="PluginAlreadyAuthenticated" id="-1804042149%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin-already-authenticated/index.html"><span>Plugin</span><wbr></wbr><span>Already</span><wbr></wbr><span><span>Authenticated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1804042149%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-plugin-already-authenticated/index.html">PluginAlreadyAuthenticated</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-plugin/activate-terminal.html">AcceptPlugin.activateTerminal</a> when the plugin is already authenticated for this merchant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1666744132%2FClasslikes%2F-1978564639" anchor-label="PluginMerchantMismatch" id="-1666744132%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin-merchant-mismatch/index.html"><span>Plugin</span><wbr></wbr><span>Merchant</span><wbr></wbr><span><span>Mismatch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1666744132%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-plugin-merchant-mismatch/index.html">PluginMerchantMismatch</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-plugin/activate-terminal.html">AcceptPlugin.activateTerminal</a> when the plugin is authenticated under a different merchant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2081129834%2FClasslikes%2F-1978564639" anchor-label="PluginNotReadyForPayments" id="2081129834%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin-not-ready-for-payments/index.html"><span>Plugin</span><wbr></wbr><span>Not</span><wbr></wbr><span>Ready</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Payments</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2081129834%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-plugin-not-ready-for-payments/index.html">PluginNotReadyForPayments</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>status<span class="token operator">: </span><a href="../com.tapaya.accept.domain.data/-plugin-status/index.html">PluginStatus</a></span></span><span class="token punctuation">)</span> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown by <a href="-accept-payments/pay.html">AcceptPayments.pay</a> when the plugin app is not in <a href="../com.tapaya.accept.domain.data/-plugin-status/-ready-for-payments/index.html">PluginStatus.ReadyForPayments</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1087936847%2FClasslikes%2F-1978564639" anchor-label="PluginTimeout" id="1087936847%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin-timeout/index.html"><span>Plugin</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1087936847%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-plugin-timeout/index.html">PluginTimeout</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown when the Accept plugin app did not respond to a service call within the allotted time.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="222306752%2FClasslikes%2F-1978564639" anchor-label="PluginUnavailable" id="222306752%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin-unavailable/index.html"><span>Plugin</span><wbr></wbr><span><span>Unavailable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="222306752%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-plugin-unavailable/index.html">PluginUnavailable</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown when the Accept plugin app is not installed, or its service could not be bound.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="728443918%2FClasslikes%2F-1978564639" anchor-label="SdkState" id="728443918%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sdk-state/index.html"><span>Sdk</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="728443918%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-sdk-state/index.html">SdkState</a></div><div class="brief "><p class="paragraph">Lifecycle state of the SDK, exposed via <a href="-accept/state.html">Accept.state</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1554643158%2FClasslikes%2F-1978564639" anchor-label="SessionExpired" id="1554643158%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-session-expired/index.html"><span>Session</span><wbr></wbr><span><span>Expired</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1554643158%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-session-expired/index.html">SessionExpired</a> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown when the authenticated session has expired; re-authenticate via <a href="-accept-auth/authenticate.html">AcceptAuth.authenticate</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2049297357%2FClasslikes%2F-1978564639" anchor-label="Unknown" id="-2049297357%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unknown/index.html"><span><span>Unknown</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2049297357%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-unknown/index.html">Unknown</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Catch-all for any failure the SDK doesn't recognize as one of its own cases yet. <span data-unresolved-link="com.tapaya.accept/Unknown//#kotlin.Throwable/PointingToCallableParameters(0)/">cause</span> is the underlying error — safe to forward to your own crash reporting, but don't surface <span data-unresolved-link="com.tapaya.accept/Unknown//#kotlin.Throwable/PointingToCallableParameters(0)/">cause</span>'s message directly in end-user-facing UI; it may contain internal/backend detail not meant for display.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-518246308%2FClasslikes%2F-1978564639" anchor-label="UnknownEnvironment" id="-518246308%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unknown-environment/index.html"><span>Unknown</span><wbr></wbr><span><span>Environment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-518246308%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-unknown-environment/index.html">UnknownEnvironment</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="-init-exception/index.html">InitException</a></div><div class="brief "><p class="paragraph">Thrown when <span data-unresolved-link="com.tapaya.accept/UnknownEnvironment//#kotlin.String/PointingToCallableParameters(0)/">key</span> does not match a known SDK environment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1556018327%2FClasslikes%2F-1978564639" anchor-label="UnsupportedCurrency" id="1556018327%2FClasslikes%2F-1978564639" data-filterable-set=":accept/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":accept/main" data-filterable-set=":accept/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unsupported-currency/index.html"><span>Unsupported</span><wbr></wbr><span><span>Currency</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1556018327%2FClasslikes%2F-1978564639"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-unsupported-currency/index.html">UnsupportedCurrency</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>code<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="-accept-exception/index.html">AcceptException</a></div><div class="brief "><p class="paragraph">Thrown when <span data-unresolved-link="com.tapaya.accept/UnsupportedCurrency//#kotlin.String/PointingToCallableParameters(0)/">code</span> is not a currency the SDK recognizes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
