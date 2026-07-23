@@ -13,6 +13,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.4.3] - 2026-07-22
+
+### Added
+- `Accept.setLogLevel(AcceptLogLevel)` for finer control over diagnostic log verbosity, with the
+  new `AcceptLogLevel` enum (`NONE`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `VERBOSE`). Defaults to
+  `DEBUG` against sandbox and `NONE` against production.
+- `Accept.setLogger(AcceptLogger?)` to route consumer-facing SDK logs into a custom sink (Timber,
+  Crashlytics, etc.); pass `null` to restore the default Logcat sink. Only already-redacted,
+  consumer-facing messages reach the logger.
+
+### Changed
+- `Accept.setDebugLoggingEnabled(enabled)` is now shorthand for `setLogLevel`: `true` maps to
+  `AcceptLogLevel.DEBUG`, `false` to `AcceptLogLevel.NONE`. Prefer `setLogLevel` for finer control.
+
 ## [1.4.2] - 2026-07-22
 
 ### Changed
@@ -84,7 +98,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.4.2...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.4.3...HEAD
+[1.4.3]: https://github.com/tapayadot/accept-android/compare/1.4.2...1.4.3
 [1.4.2]: https://github.com/tapayadot/accept-android/compare/1.4.1...1.4.2
 [1.4.1]: https://github.com/tapayadot/accept-android/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/tapayadot/accept-android/compare/1.3.2...1.4.0
