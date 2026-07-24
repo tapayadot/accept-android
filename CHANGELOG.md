@@ -13,6 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.5.0] - 2026-07-24
+
+### Added
+- `Accept.sdk.version`, `Accept.sdk.isProduction`, and `Accept.sdk.deviceId()` for diagnostics
+  and support — version is available before `initialize()`; `isProduction` reflects the active
+  environment; `deviceId()` is a stable, DataStore-backed identifier available after
+  `authenticate()`.
+- `PaymentReceiptConfig` controls the receipt screen the companion shows after an *approved*
+  payment: `DismissImmediately`, or `Show(showQrCodeReceipt, dismissBehavior)` with
+  `DismissBehavior.Manual` or `DismissBehavior.Delayed(duration)`. Set a default via
+  `AcceptPayments.setOptions(receiptConfig)`, or override per call via `pay(..., receiptConfig)`.
+  Has no effect on declined, reversed, or pending-reversal outcomes.
+
+### Changed
+- The plugin's terminal now pre-warms in the background. Pure optimization — silent no-op until the
+  companion app supports it; the pay path is unaffected either way.
+
 ## [1.4.3] - 2026-07-22
 
 ### Added
@@ -98,7 +115,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.4.3...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.5.0...HEAD
+[1.5.0]: https://github.com/tapayadot/accept-android/compare/1.4.3...1.5.0
 [1.4.3]: https://github.com/tapayadot/accept-android/compare/1.4.2...1.4.3
 [1.4.2]: https://github.com/tapayadot/accept-android/compare/1.4.1...1.4.2
 [1.4.1]: https://github.com/tapayadot/accept-android/compare/1.4.0...1.4.1

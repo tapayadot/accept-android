@@ -10,6 +10,11 @@ $dokka.location:com.tapaya.accept.domain.data/BusinessType///PointingToDeclarati
 $dokka.location:com.tapaya.accept.domain.data/BusinessType/entries/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-business-type/entries.html
 $dokka.location:com.tapaya.accept.domain.data/BusinessType/valueOf/#kotlin.String/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-business-type/value-of.html
 $dokka.location:com.tapaya.accept.domain.data/BusinessType/values/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-business-type/values.html
+$dokka.location:com.tapaya.accept.domain.data/DismissBehavior.Delayed///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-dismiss-behavior/-delayed/index.html
+$dokka.location:com.tapaya.accept.domain.data/DismissBehavior.Delayed/Delayed/#kotlin.time.Duration/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-dismiss-behavior/-delayed/-delayed.html
+$dokka.location:com.tapaya.accept.domain.data/DismissBehavior.Delayed/delay/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-dismiss-behavior/-delayed/delay.html
+$dokka.location:com.tapaya.accept.domain.data/DismissBehavior.Manual///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-dismiss-behavior/-manual/index.html
+$dokka.location:com.tapaya.accept.domain.data/DismissBehavior///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-dismiss-behavior/index.html
 $dokka.location:com.tapaya.accept.domain.data/MerchantConfig///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-merchant-config/index.html
 $dokka.location:com.tapaya.accept.domain.data/MerchantConfig/MerchantConfig/#kotlin.collections.List[kotlin.String]#kotlin.String?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-merchant-config/-merchant-config.html
 $dokka.location:com.tapaya.accept.domain.data/MerchantConfig/availableCurrencies/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-merchant-config/available-currencies.html
@@ -92,6 +97,12 @@ $dokka.location:com.tapaya.accept.domain.data/PaymentEvent.Result///PointingToDe
 $dokka.location:com.tapaya.accept.domain.data/PaymentEvent.Result/Result/#com.tapaya.accept.domain.data.PayResult/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-event/-result/-result.html
 $dokka.location:com.tapaya.accept.domain.data/PaymentEvent.Result/payResult/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-event/-result/pay-result.html
 $dokka.location:com.tapaya.accept.domain.data/PaymentEvent///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-event/index.html
+$dokka.location:com.tapaya.accept.domain.data/PaymentReceiptConfig.DismissImmediately///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-receipt-config/-dismiss-immediately/index.html
+$dokka.location:com.tapaya.accept.domain.data/PaymentReceiptConfig.Show///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-receipt-config/-show/index.html
+$dokka.location:com.tapaya.accept.domain.data/PaymentReceiptConfig.Show/Show/#kotlin.Boolean#com.tapaya.accept.domain.data.DismissBehavior/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-receipt-config/-show/-show.html
+$dokka.location:com.tapaya.accept.domain.data/PaymentReceiptConfig.Show/dismissBehavior/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-receipt-config/-show/dismiss-behavior.html
+$dokka.location:com.tapaya.accept.domain.data/PaymentReceiptConfig.Show/showQrCodeReceipt/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-receipt-config/-show/show-qr-code-receipt.html
+$dokka.location:com.tapaya.accept.domain.data/PaymentReceiptConfig///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-payment-receipt-config/index.html
 $dokka.location:com.tapaya.accept.domain.data/PaymentState.ACTION_NEEDED///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-accept -s-d-k/com.tapaya.accept.domain.data/-payment-state/-a-c-t-i-o-n_-n-e-e-d-e-d/index.html
 $dokka.location:com.tapaya.accept.domain.data/PaymentState.CANCELLED///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-accept -s-d-k/com.tapaya.accept.domain.data/-payment-state/-c-a-n-c-e-l-l-e-d/index.html
 $dokka.location:com.tapaya.accept.domain.data/PaymentState.FAILED///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-accept -s-d-k/com.tapaya.accept.domain.data/-payment-state/-f-a-i-l-e-d/index.html
@@ -166,7 +177,8 @@ $dokka.location:com.tapaya.accept/AcceptMerchant/info/#/PointingToDeclaration/-
 $dokka.location:com.tapaya.accept/AcceptMerchant/onboardingStatus/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-merchant/onboarding-status.html
 $dokka.location:com.tapaya.accept/AcceptPayments///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/index.html
 $dokka.location:com.tapaya.accept/AcceptPayments/cancel/#kotlin.String/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/cancel.html
-$dokka.location:com.tapaya.accept/AcceptPayments/pay/#kotlin.Long#kotlin.String#kotlin.String?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/pay.html
+$dokka.location:com.tapaya.accept/AcceptPayments/pay/#kotlin.Long#kotlin.String#kotlin.String?#com.tapaya.accept.domain.data.PaymentReceiptConfig?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/pay.html
+$dokka.location:com.tapaya.accept/AcceptPayments/setOptions/#com.tapaya.accept.domain.data.PaymentReceiptConfig/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/set-options.html
 $dokka.location:com.tapaya.accept/AcceptPayments/status/#kotlin.String/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/status.html
 $dokka.location:com.tapaya.accept/AcceptPlugin///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/index.html
 $dokka.location:com.tapaya.accept/AcceptPlugin/activateTerminal/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/activate-terminal.html
@@ -175,7 +187,10 @@ $dokka.location:com.tapaya.accept/AcceptPlugin/isInstalled/#/PointingToDeclarati
 $dokka.location:com.tapaya.accept/AcceptPlugin/logout/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/logout.html
 $dokka.location:com.tapaya.accept/AcceptPlugin/status/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/status.html
 $dokka.location:com.tapaya.accept/AcceptSdk///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/index.html
+$dokka.location:com.tapaya.accept/AcceptSdk/deviceId/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/device-id.html
+$dokka.location:com.tapaya.accept/AcceptSdk/isProduction/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/is-production.html
 $dokka.location:com.tapaya.accept/AcceptSdk/minimumAmounts/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/minimum-amounts.html
+$dokka.location:com.tapaya.accept/AcceptSdk/version/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/version.html
 $dokka.location:com.tapaya.accept/ActivateTerminalFailureReason.CONFIRM_FAILED///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-accept -s-d-k/com.tapaya.accept/-activate-terminal-failure-reason/-c-o-n-f-i-r-m_-f-a-i-l-e-d/index.html
 $dokka.location:com.tapaya.accept/ActivateTerminalFailureReason.HANDOVER_FAILED///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-accept -s-d-k/com.tapaya.accept/-activate-terminal-failure-reason/-h-a-n-d-o-v-e-r_-f-a-i-l-e-d/index.html
 $dokka.location:com.tapaya.accept/ActivateTerminalFailureReason.INVALID_INTENT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-accept -s-d-k/com.tapaya.accept/-activate-terminal-failure-reason/-i-n-v-a-l-i-d_-i-n-t-e-n-t/index.html
