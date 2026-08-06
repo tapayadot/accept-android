@@ -13,6 +13,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.6.0] - 2026-08-05
+
+### Added
+- Optional `tip` (Long, minor units) on `AcceptPayments.pay()` — when set, the plugin skips its
+  own interactive tip screen and charges `amount + tip`.
+- `PayResult.Success.authCode` exposes the processor authorization code reported by the terminal.
+  Nullable/informational; may be absent depending on the processor.
+- `ReceiptPrintBehavior` on `PaymentReceiptConfig.Show` (`Automatic`, `OnDemand`, `Disabled`)
+  controls when the companion prints the physical receipt. Defaults to `OnDemand`.
+- `nfcPosition` payment config hint (`NfcPositionConfig`) tells the companion where the device's
+  NFC antenna is, to place the tap animation correctly. Defaults to `Unspecified`.
+- Optional `metadata` param on `AcceptPayments.pay()`, threaded through to the plugin and echoed
+  back on all `PayResult` variants.
+
+### Changed
+- Payment extras are no longer logged in full (`extras=...`) to avoid leaking metadata values;
+  only extra keys are logged now.
+
+### Fixed
+- Removed dead `AcceptService`/`AcceptConfigProvider` manifest entries.
+
 ## [1.5.0] - 2026-07-24
 
 ### Added
