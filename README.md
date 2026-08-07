@@ -91,16 +91,29 @@ try {
 `PaymentEvent.CreationFailed`:
 
 ```kotlin
-Accept.payments.pay(amount = 1000, currency = "USD") // minor units (cents)
+Accept.payments.pay(
+    amount = 1000,                                 // minor units (cents)
+    currency = "USD",
+    paymentToken = null,                           // set to resume an existing payment
+    receiptConfig = PaymentReceiptConfig.Show(),    // shown after an approved payment
+    nfcPosition = NfcPositionConfig.Unspecified,    // let the companion resolve antenna position
+    metadata = mapOf("orderId" to "12345"),         // echoed back on every PayResult
+    tip = 200,                                      // minor units; skips the plugin's own tip screen
+)
     .collect { event ->
         when (event) {
-            PaymentEvent.Creating -> {}                 // building the request
-            PaymentEvent.Launched -> {}                 // plugin UI shown
-            is PaymentEvent.Result -> event.payResult   // terminal outcome
+            PaymentEvent.Creating -> {}                    // building the request
+            is PaymentEvent.Created -> event.paymentToken  // token available before launch
+            PaymentEvent.Launched -> {}                    // plugin UI shown
+            is PaymentEvent.Result -> event.payResult      // terminal outcome
             is PaymentEvent.CreationFailed -> event.cause
         }
     }
 ```
+
+`receiptConfig` and `nfcPosition` default to whatever was last set via
+`Accept.payments.setOptions(...)`, if anything. On success, `PayResult.Success`
+exposes the processor's `authCode` when the terminal reports one.
 
 ## API surface
 
@@ -110,15 +123,17 @@ All surfaces are accessed via the `Accept` object.
 | --- | --- | --- |
 | State | `Accept.state` | Lifecycle `StateFlow<SdkState>` |
 | Auth | `Accept.auth` | `authenticate(merchantToken)` |
-| SDK config | `Accept.sdk` | `minimumAmounts()` |
+| SDK config | `Accept.sdk` | `version`, `isProduction`, `deviceId()`, `minimumAmounts()` |
 | Merchant | `Accept.merchant` | `info()`, `config()`, `onboardingStatus()`, `availableCurrencies()` |
-| Payments | `Accept.payments` | `pay(...)`, `status(token)`, `cancel(token)` |
+| Payments | `Accept.payments` | `pay(...)`, `setOptions(...)`, `status(token)`, `cancel(token)` |
 | Plugin | `Accept.plugin` | `isInstalled()`, `install()`, `activateTerminal()`, `status()`, `logout()` |
 
 Top-level helpers on `Accept`:
 
 - `initialize(context, isProduction)` — set up and choose environment.
-- `setDebugLoggingEnabled(enabled)` — toggle internal debug logging.
+- `setLogLevel(level)` — set diagnostic log verbosity (`AcceptLogLevel`).
+- `setLogger(logger)` — route SDK logs into a custom sink (Timber, Crashlytics, etc.).
+- `setDebugLoggingEnabled(enabled)` — shorthand for `setLogLevel(DEBUG or NONE)`.
 - `clear()` — wipe local state (auth token, device id, cached config); call on logout.
 
 ### Terminal activation
