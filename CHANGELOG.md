@@ -13,6 +13,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.7.0] - 2026-08-10
+
+### Added
+- Optional `transactionTimeout` (`Duration`) on `AcceptPayments.pay()` and `setOptions()` controls
+  how long the companion waits for a card tap. Validated to 0..120 seconds; out-of-range surfaces
+  as `TransactionTimeoutOutOfRange` via `PaymentEvent.CreationFailed` (`pay()` never throws
+  synchronously).
+
+### Changed
+- `AcceptPayments.refund()` is now public (previously internal and unreachable by SDK consumers),
+  matching `cancel()`'s KDoc/throws style.
+
+### Fixed
+- Consumer ProGuard/R8 rules: `AcceptException` subtypes not ending in `Exception` are now kept by
+  inheritance instead of name-suffix matching, so future subtypes can't fall through the cracks.
+  Also keeps `AcceptLogLevel`, and scopes the Parcelable `CREATOR` keep rule to the SDK's own
+  package instead of the whole app.
+
 ## [1.6.0] - 2026-08-05
 
 ### Added

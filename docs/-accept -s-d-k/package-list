@@ -203,8 +203,9 @@ $dokka.location:com.tapaya.accept/AcceptMerchant/info/#/PointingToDeclaration/-
 $dokka.location:com.tapaya.accept/AcceptMerchant/onboardingStatus/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-merchant/onboarding-status.html
 $dokka.location:com.tapaya.accept/AcceptPayments///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/index.html
 $dokka.location:com.tapaya.accept/AcceptPayments/cancel/#kotlin.String/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/cancel.html
-$dokka.location:com.tapaya.accept/AcceptPayments/pay/#kotlin.Long#kotlin.String#kotlin.String?#com.tapaya.accept.domain.data.PaymentReceiptConfig?#com.tapaya.accept.domain.data.NfcPositionConfig?#kotlin.collections.Map[kotlin.String,kotlin.String]#kotlin.Long?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/pay.html
-$dokka.location:com.tapaya.accept/AcceptPayments/setOptions/#com.tapaya.accept.domain.data.PaymentReceiptConfig#com.tapaya.accept.domain.data.NfcPositionConfig/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/set-options.html
+$dokka.location:com.tapaya.accept/AcceptPayments/pay/#kotlin.Long#kotlin.String#kotlin.String?#com.tapaya.accept.domain.data.PaymentReceiptConfig?#com.tapaya.accept.domain.data.NfcPositionConfig?#kotlin.collections.Map[kotlin.String,kotlin.String]#kotlin.Long?#kotlin.time.Duration?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/pay.html
+$dokka.location:com.tapaya.accept/AcceptPayments/refund/#kotlin.String#com.tapaya.accept.domain.data.RefundReason/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/refund.html
+$dokka.location:com.tapaya.accept/AcceptPayments/setOptions/#com.tapaya.accept.domain.data.PaymentReceiptConfig#com.tapaya.accept.domain.data.NfcPositionConfig#kotlin.time.Duration?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/set-options.html
 $dokka.location:com.tapaya.accept/AcceptPayments/status/#kotlin.String/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-payments/status.html
 $dokka.location:com.tapaya.accept/AcceptPlugin///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/index.html
 $dokka.location:com.tapaya.accept/AcceptPlugin/activateTerminal/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/activate-terminal.html
@@ -267,6 +268,9 @@ $dokka.location:com.tapaya.accept/SdkState.Idle///PointingToDeclaration/-accept
 $dokka.location:com.tapaya.accept/SdkState.Initialized///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-sdk-state/-initialized/index.html
 $dokka.location:com.tapaya.accept/SdkState///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-sdk-state/index.html
 $dokka.location:com.tapaya.accept/SessionExpired///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-session-expired/index.html
+$dokka.location:com.tapaya.accept/TransactionTimeoutOutOfRange///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-transaction-timeout-out-of-range/index.html
+$dokka.location:com.tapaya.accept/TransactionTimeoutOutOfRange/TransactionTimeoutOutOfRange/#kotlin.time.Duration/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-transaction-timeout-out-of-range/-transaction-timeout-out-of-range.html
+$dokka.location:com.tapaya.accept/TransactionTimeoutOutOfRange/transactionTimeout/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-transaction-timeout-out-of-range/transaction-timeout.html
 $dokka.location:com.tapaya.accept/Unknown///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-unknown/index.html
 $dokka.location:com.tapaya.accept/Unknown/Unknown/#kotlin.Throwable/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-unknown/-unknown.html
 $dokka.location:com.tapaya.accept/Unknown/cause/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-unknown/cause.html
