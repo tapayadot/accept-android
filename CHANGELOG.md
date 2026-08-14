@@ -13,6 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.8.0] - 2026-08-13
+
+### Added
+- `ReceiptDetails` on `PayResult.Success`/`PayResult.Declined` exposes structured card-receipt
+  data reported by the terminal — merchant ID, terminal ID, card brand, EMV application
+  label/AID, masked PAN, response code, and an ISO-8601 transaction timestamp — for callers that
+  print their own official card receipt instead of relying solely on
+  `PaymentStatus.receiptUrl`'s hosted HTML page. Every field is optional/best-effort.
+
 ## [1.7.0] - 2026-08-10
 
 ### Added
