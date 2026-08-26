@@ -13,6 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.9.0] - 2026-08-25
+
+### Added
+- `AcceptPlugin.updateInfo()` reports whether a newer version of the plugin app is available on
+  Play (`PluginUpdateInfo`: `UpToDate` / `UpdateAvailable(priority)` / `Unknown`). The plugin app
+  checks itself via Play Core's in-app update API and reports the result over the existing status
+  channel — the SDK never queries Play directly. Requires a plugin app build that sets the new
+  `update_available`/`update_priority` status fields; older plugin builds report `Unknown`.
+
 ## [1.8.0] - 2026-08-13
 
 ### Added

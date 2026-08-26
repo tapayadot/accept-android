@@ -154,6 +154,12 @@ $dokka.location:com.tapaya.accept.domain.data/PluginStatus.NotAuthenticated///Po
 $dokka.location:com.tapaya.accept.domain.data/PluginStatus.NotInstalled///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-status/-not-installed/index.html
 $dokka.location:com.tapaya.accept.domain.data/PluginStatus.ReadyForPayments///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-status/-ready-for-payments/index.html
 $dokka.location:com.tapaya.accept.domain.data/PluginStatus///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-status/index.html
+$dokka.location:com.tapaya.accept.domain.data/PluginUpdateInfo.Unknown///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-update-info/-unknown/index.html
+$dokka.location:com.tapaya.accept.domain.data/PluginUpdateInfo.UpToDate///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-update-info/-up-to-date/index.html
+$dokka.location:com.tapaya.accept.domain.data/PluginUpdateInfo.UpdateAvailable///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-update-info/-update-available/index.html
+$dokka.location:com.tapaya.accept.domain.data/PluginUpdateInfo.UpdateAvailable/UpdateAvailable/#kotlin.Int/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-update-info/-update-available/-update-available.html
+$dokka.location:com.tapaya.accept.domain.data/PluginUpdateInfo.UpdateAvailable/priority/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-update-info/-update-available/priority.html
+$dokka.location:com.tapaya.accept.domain.data/PluginUpdateInfo///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-plugin-update-info/index.html
 $dokka.location:com.tapaya.accept.domain.data/ReceiptDetails///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-receipt-details/index.html
 $dokka.location:com.tapaya.accept.domain.data/ReceiptDetails/ReceiptDetails/#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-receipt-details/-receipt-details.html
 $dokka.location:com.tapaya.accept.domain.data/ReceiptDetails/aid/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-receipt-details/aid.html
@@ -225,6 +231,7 @@ $dokka.location:com.tapaya.accept/AcceptPlugin/install/#/PointingToDeclaration/
 $dokka.location:com.tapaya.accept/AcceptPlugin/isInstalled/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/is-installed.html
 $dokka.location:com.tapaya.accept/AcceptPlugin/logout/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/logout.html
 $dokka.location:com.tapaya.accept/AcceptPlugin/status/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/status.html
+$dokka.location:com.tapaya.accept/AcceptPlugin/updateInfo/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/update-info.html
 $dokka.location:com.tapaya.accept/AcceptSdk///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/index.html
 $dokka.location:com.tapaya.accept/AcceptSdk/deviceId/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/device-id.html
 $dokka.location:com.tapaya.accept/AcceptSdk/isProduction/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/is-production.html
