@@ -13,6 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.9.1] - 2026-08-27
+
+### Fixed
+- Location fixes now fall back to the OS's last-known location when a fresh fix times out or the
+  live request reports unavailable, instead of failing outright. On Android 11 (API 30),
+  `LocationManager.getCurrentLocation()` is no longer used — it's unreliable on that API level —
+  in favor of a one-shot `requestLocationUpdates()` request. Also guards against duplicate/late
+  location callbacks and prefers the network provider before GPS.
+
 ## [1.9.0] - 2026-08-25
 
 ### Added
