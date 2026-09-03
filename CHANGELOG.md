@@ -13,6 +13,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.10.0] - 2026-09-03
+
+### Added
+- `AcceptPlugin.activateTerminal()` now throws `NoTidsAvailableForMerchant` when the merchant has
+  no unassigned terminal (TID) left to activate, instead of a generic `Unknown` error.
+- Dual-sided ("double-sided") device support: `Accept.displays` (`all()`, `customerFacing()`,
+  `isDualScreen`) reports the device's screens, and the new `PaymentDisplay` option on
+  `AcceptPayments.setOptions(display = ...)` / `pay(display = ...)` runs the plugin's payment UI
+  on the customer-facing panel while the host app keeps the merchant one. A target that can't be
+  honored falls back to the default display, so single-screen behavior is unchanged. The terminal
+  warm-up fired by `authenticate()` follows the same target. New `:dualscreen` sample app shows
+  the full two-panel checkout.
+
+### Changed
+- `PayHostActivity` now declares an empty `taskAffinity`, so a payment always starts a fresh task
+  instead of stacking onto the host app's. Required for the cross-display launch above; on a
+  single-screen device the only visible difference is that the invisible host no longer joins the
+  host app's back stack.
+- The SDK's remote diagnostics now identify the device behind a log line: device id, brand, model,
+  OS version, and the host app's package name, plus a one-time record of the device's display
+  layout at `initialize()`. Internal diagnostics only — nothing about the merchant's customers is
+  collected, and the sink stays off entirely in debug builds.
+
+### Fixed
+
 ## [1.9.1] - 2026-08-27
 
 ### Fixed
@@ -181,7 +206,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.5.0...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.10.0...HEAD
+[1.10.0]: https://github.com/tapayadot/accept-android/compare/1.9.1...1.10.0
 [1.5.0]: https://github.com/tapayadot/accept-android/compare/1.4.3...1.5.0
 [1.4.3]: https://github.com/tapayadot/accept-android/compare/1.4.2...1.4.3
 [1.4.2]: https://github.com/tapayadot/accept-android/compare/1.4.1...1.4.2
