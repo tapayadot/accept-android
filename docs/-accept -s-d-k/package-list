@@ -57,6 +57,9 @@ $dokka.location:com.tapaya.accept.domain.data/MinimumAmount/MinimumAmount/#kotli
 $dokka.location:com.tapaya.accept.domain.data/MinimumAmount/amount/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-minimum-amount/amount.html
 $dokka.location:com.tapaya.accept.domain.data/MinimumAmount/currency/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-minimum-amount/currency.html
 $dokka.location:com.tapaya.accept.domain.data/NfcPositionConfig.ExternalAbove///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-nfc-position-config/-external-above/index.html
+$dokka.location:com.tapaya.accept.domain.data/NfcPositionConfig.ExternalReader///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-nfc-position-config/-external-reader/index.html
+$dokka.location:com.tapaya.accept.domain.data/NfcPositionConfig.ExternalReader/ExternalReader/#kotlin.String?/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-nfc-position-config/-external-reader/-external-reader.html
+$dokka.location:com.tapaya.accept.domain.data/NfcPositionConfig.ExternalReader/message/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-nfc-position-config/-external-reader/message.html
 $dokka.location:com.tapaya.accept.domain.data/NfcPositionConfig.OnDevice///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-nfc-position-config/-on-device/index.html
 $dokka.location:com.tapaya.accept.domain.data/NfcPositionConfig.OnDevice/OnDevice/#com.tapaya.accept.domain.data.OnDeviceSurface#kotlin.Float#kotlin.Float/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-nfc-position-config/-on-device/-on-device.html
 $dokka.location:com.tapaya.accept.domain.data/NfcPositionConfig.OnDevice/surface/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept.domain.data/-nfc-position-config/-on-device/surface.html

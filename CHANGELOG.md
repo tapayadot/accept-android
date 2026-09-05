@@ -13,6 +13,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.11.0] - 2026-09-05
+
+### Added
+- `NfcPositionConfig.ExternalReader` for setups where the antenna is on a separate reader that is
+  not above the device — a counter reader, a side-mounted pinpad, a customer-facing dock. There is
+  no point on the device to place and no direction to point at, so the companion drops its tap
+  indicator entirely and shows the amount with a prompt underneath it instead. Its optional
+  `message` replaces the companion's own localized prompt for setups the default wording doesn't
+  describe; you own its localization, blank counts as unset, and the companion trims and clamps it.
+  Companion app 1.5.2 or newer is required — older builds treat the new mode as no override at all
+  and keep resolving antenna position themselves, so nothing breaks.
+
+### Changed
+
+### Fixed
+
 ## [1.10.0] - 2026-09-03
 
 ### Added
