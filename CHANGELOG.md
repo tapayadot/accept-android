@@ -13,6 +13,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.12.0] - 2026-09-08
+
+### Added
+- The hosted receipt page's URL is now available from the payment flow itself, instead of only from
+  a later `PaymentStatus` lookup. `PaymentEvent.Created` carries `receiptUrl` alongside the payment
+  token — so the link is in hand before the plugin is even launched — and `PayResult.Success` /
+  `PayResult.Declined` carry it too, so a terminal result is self-contained. The URL resolves to the
+  finished receipt once the payment settles; the link itself is stable from creation. Both fields
+  are nullable and default to `null`, so existing construction and `copy()` calls keep compiling.
+
+### Changed
+
+### Fixed
+
 ## [1.11.0] - 2026-09-05
 
 ### Added
