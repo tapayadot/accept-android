@@ -13,6 +13,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.13.0] - 2026-09-10
+
+### Added
+
+### Changed
+- A plugin bind that fails now says why. `PluginUnavailable` used to be raised behind a single
+  `plugin bind failed` line, which reads identically whether the plugin is not installed, installed
+  but disabled, uninstalled-for-this-user with its data kept, or merely invisible because the host
+  app's merged manifest is missing the `<queries>` entry API 30+ package visibility requires. The
+  SDK now tells those four apart and logs the distinction to integrators, alongside the counts of
+  services that resolved with and without disabled components, the plugin's version and install
+  source, and which other environment's plugin build is on the device. A successful bind records
+  the same identity once, and again whenever it changes, so a later failure can be read against a
+  baseline instead of in isolation — a version skew and a plugin disabled after the fact no longer
+  look alike in a field report. Diagnostics only: no public type changed, and `isInstalled()` still
+  answers exactly what it did before, a disabled plugin included.
+
+### Fixed
+- Every failed bind leaked a `ServiceConnection`. `bindService()` registers the connection before
+  it asks the system to bind, so neither a `false` return nor a thrown `SecurityException`
+  unregisters it, and the host `Context` accumulated one leaked connection per failure
+  (`ServiceConnectionLeaked`). Both paths now unbind.
+- A `SecurityException` from `bindService()` — the plugin's service not exported to the host app,
+  or gated behind a permission it does not hold — propagated to the caller as-is instead of the
+  `PluginUnavailable` the API documents. It is now caught, logged with its cause attached, and
+  reported as `PluginUnavailable`.
+- A plugin whose process died before it connected — killed, updated, or force-stopped mid-bind —
+  made the caller wait out the full bind timeout for a connection that was never coming. The
+  binding's death now fails the call immediately.
+
 ## [1.12.0] - 2026-09-08
 
 ### Added
@@ -236,7 +266,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.10.0...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.13.0...HEAD
+[1.13.0]: https://github.com/tapayadot/accept-android/compare/1.12.0...1.13.0
+[1.12.0]: https://github.com/tapayadot/accept-android/compare/1.11.0...1.12.0
+[1.11.0]: https://github.com/tapayadot/accept-android/compare/1.10.0...1.11.0
 [1.10.0]: https://github.com/tapayadot/accept-android/compare/1.9.1...1.10.0
 [1.5.0]: https://github.com/tapayadot/accept-android/compare/1.4.3...1.5.0
 [1.4.3]: https://github.com/tapayadot/accept-android/compare/1.4.2...1.4.3
