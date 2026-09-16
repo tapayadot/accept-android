@@ -13,6 +13,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.14.0] - 2026-09-15
+
+### Added
+- `Accept.setTheme()` / `getTheme()` let host apps forward org branding (colors + logos) to the
+  companion app's activation, status, and payment screens. `AcceptTheme` mirrors the existing
+  org-theme wire format field-for-field, pushed to the plugin via the `setTheme()` AIDL call and
+  a `THEME_JSON` intent extra on `PAY`/`ACTIVATE_TERMINAL`/`WARM_UP`. `setTheme()` persists until
+  changed or cleared (`null`, or `clear()`) — it's session-wide branding, not a per-payment
+  override — and is safe to call before or after `initialize()`.
+- `Accept.createLocalThemeImageUri()` covers logos the host app has locally (e.g. picked from the
+  photo gallery) rather than hosted at a stable URL: writes the bytes to SDK-private storage and
+  returns a `content://` URI the companion is granted read access to, usable anywhere
+  `AcceptTheme`'s image fields take a URL.
+
+### Changed
+
+### Fixed
+- `activateTerminal()` now fails fast with `MerchantOnboardingIncomplete` when the merchant hasn't
+  finished onboarding or its card payment method isn't ready, instead of proceeding to build the
+  intent and launch the plugin activity. The gate had been temporarily disabled while merchant
+  onboarding was being fixed on the backend; it's re-enabled now that the backend fix has shipped.
+- Plugin binder calls (bind/connect/AIDL call) now run on `Dispatchers.IO` instead of whatever
+  dispatcher the caller launched on. The cold-bind wait (up to `BIND_TIMEOUT_MS`) previously ran on
+  Main by default when called from a ViewModel's `viewModelScope.launch`, freezing input dispatch
+  and risking an ANR. `setTheme()` is also marked `oneway`, so pushing a theme never waits on the
+  companion at all.
+
 ## [1.13.0] - 2026-09-10
 
 ### Added
