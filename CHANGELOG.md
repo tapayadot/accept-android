@@ -13,6 +13,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.14.1] - 2026-09-22
+
+### Added
+
+### Changed
+
+### Fixed
+- Payments on devices with a weak or non-GMS location stack failed with `LocationUnavailable` even
+  though the device held a usable fix. The fused provider returned nothing within
+  `FRESH_FIX_TIMEOUT_MS`, and the last-known fallback then rejected the only fix on the device
+  because `MAX_CACHED_LOCATION_AGE_MS` was 2 minutes — on a stationary countertop terminal the last
+  fix is routinely tens of minutes old. The cached/last-known window is now 30 minutes, so the
+  fallback accepts the fixes it exists to accept. A terminal does not move between transactions, so
+  a half-hour-old fix describes its location as well as a fresh one; the fresh-fix attempt still
+  runs first and is still preferred when it succeeds.
+
 ## [1.14.0] - 2026-09-15
 
 ### Added
@@ -293,7 +309,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.13.0...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.14.1...HEAD
+[1.14.1]: https://github.com/tapayadot/accept-android/compare/1.14.0...1.14.1
+[1.14.0]: https://github.com/tapayadot/accept-android/compare/1.13.0...1.14.0
 [1.13.0]: https://github.com/tapayadot/accept-android/compare/1.12.0...1.13.0
 [1.12.0]: https://github.com/tapayadot/accept-android/compare/1.11.0...1.12.0
 [1.11.0]: https://github.com/tapayadot/accept-android/compare/1.10.0...1.11.0
