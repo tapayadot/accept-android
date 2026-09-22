@@ -13,6 +13,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.14.2] - 2026-09-22
+
+### Added
+
+### Changed
+- Payments no longer wait on a location fix. Every `pay()` used to race a live fix against a
+  timeout before the payment could be created, so a terminal on a weak location stack paid that
+  latency on every transaction and reached its last-known fix only after the timeout had already
+  been spent. The most recent known fix is now served immediately, and is refreshed in the
+  background — off the payment path — once it is older than an hour. The cache is seeded from the
+  OS last-known location on a cold start, so only a terminal that has never held a fix blocks at
+  all, and that first wait is capped at 30 seconds. A terminal does not move between transactions,
+  so an hour-old fix describes its location as well as a fresh one. One consequence worth knowing:
+  a cached fix no longer has an upper age bound, so a terminal that has been offline for days
+  serves a days-old fix and refreshes afterwards.
+
+### Fixed
+
 ## [1.14.1] - 2026-09-22
 
 ### Added
@@ -309,7 +327,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.14.1...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.14.2...HEAD
+[1.14.2]: https://github.com/tapayadot/accept-android/compare/1.14.1...1.14.2
 [1.14.1]: https://github.com/tapayadot/accept-android/compare/1.14.0...1.14.1
 [1.14.0]: https://github.com/tapayadot/accept-android/compare/1.13.0...1.14.0
 [1.13.0]: https://github.com/tapayadot/accept-android/compare/1.12.0...1.13.0
