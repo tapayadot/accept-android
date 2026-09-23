@@ -13,6 +13,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.15.0] - 2026-09-23
+
+### Added
+
+### Changed
+
+### Fixed
+- Payments failed with `LocationUnavailable` or `LocationTimeout` on terminals whose `fused`
+  provider reports itself present and enabled but never produces a fix. On API 31+ a live fix was
+  requested from `fused` alone, so a null or silent answer ended the request even while `network`
+  and `gps` were enabled and working. A live fix now races every enabled provider at once and
+  takes the first to answer, failing only once all of them have answered without a location. The
+  OS last-known lookup that seeds the cache also covers `fused` and `passive` now, so a cold start
+  more often avoids blocking at all.
+
 ## [1.14.2] - 2026-09-22
 
 ### Added
@@ -327,7 +342,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.14.2...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.15.0...HEAD
+[1.15.0]: https://github.com/tapayadot/accept-android/compare/1.14.2...1.15.0
 [1.14.2]: https://github.com/tapayadot/accept-android/compare/1.14.1...1.14.2
 [1.14.1]: https://github.com/tapayadot/accept-android/compare/1.14.0...1.14.1
 [1.14.0]: https://github.com/tapayadot/accept-android/compare/1.13.0...1.14.0
