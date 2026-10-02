@@ -13,6 +13,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.16.0] - 2026-09-30
+
+### Added
+- `AcceptPlugin.updateInfo()` answers from the backend's release metadata, unauthenticated,
+  against the installed package, so it works with no store and with the plugin absent. A
+  Play-installed plugin is still measured against Play, since a release reaches the backend while
+  the same build can sit in review; the plugin's own check stays the fallback.
+- **accept-installer:** new optional artifact, `com.tapaya:accept-installer`. On a storeless device
+  `AcceptPlugin.install()` downloads the APK and installs it through the system installer.
+  Depending on the artifact is the opt-in — it carries `REQUEST_INSTALL_PACKAGES`, which Play
+  requires integrators to declare, and `:accept` never asks for it. The APK is verified
+  against its SHA-256, declared package and version code, a pinned signer, and the installed
+  plugin's own signer before anything is committed.
+- `PluginStoreUnavailable`, `PluginSelfInstallUnavailable`, `PluginInstallPermissionRequired`,
+  `PluginInstallAuthRequired` and `PluginDownloadNotPermitted` errors from
+  `AcceptPlugin.install()` — no store, no installer artifact, no "Install unknown apps" grant, no
+  merchant session, or a merchant the backend does not allow the APK. The last is an entitlement
+  decision rather than anything retryable: point the merchant at their account manager or
+  developers@tapaya.com.
+
+### Changed
+- `AcceptPlugin.install()` no longer always opens a store listing: with no store it takes the
+  download path above, which needs an authenticated merchant and says so before the transfer
+  starts rather than after.
+
+### Fixed
+
 ## [1.15.0] - 2026-09-23
 
 ### Added

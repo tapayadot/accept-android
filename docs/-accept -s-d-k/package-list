@@ -349,10 +349,15 @@ $dokka.location:com.tapaya.accept/PaymentCreationFailed/cause/#/PointingToDeclar
 $dokka.location:com.tapaya.accept/PaymentInProgress///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-payment-in-progress/index.html
 $dokka.location:com.tapaya.accept/PaymentNotFound///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-payment-not-found/index.html
 $dokka.location:com.tapaya.accept/PluginAlreadyAuthenticated///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-already-authenticated/index.html
+$dokka.location:com.tapaya.accept/PluginDownloadNotPermitted///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-download-not-permitted/index.html
+$dokka.location:com.tapaya.accept/PluginInstallAuthRequired///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-install-auth-required/index.html
+$dokka.location:com.tapaya.accept/PluginInstallPermissionRequired///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-install-permission-required/index.html
 $dokka.location:com.tapaya.accept/PluginMerchantMismatch///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-merchant-mismatch/index.html
 $dokka.location:com.tapaya.accept/PluginNotReadyForPayments///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-not-ready-for-payments/index.html
 $dokka.location:com.tapaya.accept/PluginNotReadyForPayments/PluginNotReadyForPayments/#com.tapaya.accept.domain.data.PluginStatus/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-not-ready-for-payments/-plugin-not-ready-for-payments.html
 $dokka.location:com.tapaya.accept/PluginNotReadyForPayments/status/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-not-ready-for-payments/status.html
+$dokka.location:com.tapaya.accept/PluginSelfInstallUnavailable///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-self-install-unavailable/index.html
+$dokka.location:com.tapaya.accept/PluginStoreUnavailable///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-store-unavailable/index.html
 $dokka.location:com.tapaya.accept/PluginTimeout///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-timeout/index.html
 $dokka.location:com.tapaya.accept/PluginUnavailable///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-plugin-unavailable/index.html
 $dokka.location:com.tapaya.accept/SdkState.Authenticated///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-sdk-state/-authenticated/index.html

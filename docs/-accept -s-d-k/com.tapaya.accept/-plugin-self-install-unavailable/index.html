@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>AcceptPlugin</title>
+    <title>PluginSelfInstallUnavailable</title>
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
         <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js", "js");</script>
@@ -104,103 +104,88 @@
         </nav>
         <div id="resizer" class="resizer" data-item-type="BAR"></div>
         <div id="main" data-item-type="SECTION" role="main">
-<div class="main-content" data-page-type="classlike" id="content" pageIds="Accept SDK::com.tapaya.accept/AcceptPlugin///PointingToDeclaration//-1466511717">
-  <div class="breadcrumbs"><a href="../../../index.html">Accept SDK</a><span class="delimiter">/</span><a href="../index.html">com.tapaya.accept</a><span class="delimiter">/</span><span class="current">AcceptPlugin</span></div>
+<div class="main-content" data-page-type="classlike" id="content" pageIds="Accept SDK::com.tapaya.accept/PluginSelfInstallUnavailable///PointingToDeclaration//-1466511717">
+  <div class="breadcrumbs"><a href="../../../index.html">Accept SDK</a><span class="delimiter">/</span><a href="../index.html">com.tapaya.accept</a><span class="delimiter">/</span><span class="current">PluginSelfInstallUnavailable</span></div>
   <div class="cover ">
-    <h1 class="cover"><span>Accept</span><wbr></wbr><span><span>Plugin</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AcceptPlugin</a></div><p class="paragraph">Accept plugin surface for interacting with physical payment terminals.</p><p class="paragraph">This class handles the interaction with the external Accept plugin application, including installation checks, terminal activation, and status monitoring.</p><p class="paragraph">Terminal activation is required before the device can process physical card payments.</p><p class="paragraph">Obtain an instance via <a href="../-accept/plugin.html">Accept.plugin</a>.</p></div></div>
+    <h1 class="cover"><span>Plugin</span><wbr></wbr><span>Self</span><wbr></wbr><span>Install</span><wbr></wbr><span><span>Unavailable</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="index.html">PluginSelfInstallUnavailable</a> : <a href="../-accept-exception/index.html">AcceptException</a></div><p class="paragraph">Thrown by <a href="../-accept-plugin/install.html">AcceptPlugin.install</a> on a device with no app store, when the optional <code class="lang-kotlin">com.tapaya.accept:accept-installer</code> artifact is not on the classpath.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <div data-togglable="FUNCTION">
-        <h2 class="tableheader">Functions</h2>
-        <div class="table"><a data-name="317760870%2FFunctions%2F-1466511717" anchor-label="activateTerminal" id="317760870%2FFunctions%2F-1466511717" data-filterable-set=":accept/release"></a>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-654012527%2FProperties%2F-1466511717" anchor-label="cause" id="-654012527%2FProperties%2F-1466511717" data-filterable-set=":accept/release"></a>
           <div class="table-row table-row_content" data-filterable-current=":accept/release" data-filterable-set=":accept/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="activate-terminal.html"><span>activate</span><wbr></wbr><span><span>Terminal</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="317760870%2FFunctions%2F-1466511717"></span>
+                  <div><a href="../-unknown-environment/index.html#-654012527%2FProperties%2F-1466511717"><span><span>cause</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-654012527%2FProperties%2F-1466511717"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="activate-terminal.html"><span class="token function">activateTerminal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-activate-terminal-result/index.html">ActivateTerminalResult</a></div><div class="brief "><p class="paragraph">Launches the plugin's terminal activation flow and suspends until it completes. Callable from anywhere holding a <span data-unresolved-link="android.content/Context///PointingToDeclaration/">Context</span> — a <code class="lang-kotlin">ViewModel</code>, a use case, or an <code class="lang-kotlin">Activity</code> — with no prior registration required.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-unknown-environment/index.html#-654012527%2FProperties%2F-1466511717">cause</a><span class="token operator">: </span><span data-unresolved-link="kotlin/Throwable///PointingToDeclaration/">Throwable</span><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-897313750%2FFunctions%2F-1466511717" anchor-label="install" id="-897313750%2FFunctions%2F-1466511717" data-filterable-set=":accept/release"></a>
+<a data-name="-1049134860%2FProperties%2F-1466511717" anchor-label="localizedMessage" id="-1049134860%2FProperties%2F-1466511717" data-filterable-set=":accept/release"></a>
           <div class="table-row table-row_content" data-filterable-current=":accept/release" data-filterable-set=":accept/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="install.html"><span><span>install</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-897313750%2FFunctions%2F-1466511717"></span>
+                  <div><a href="../-unknown/index.html#-1049134860%2FProperties%2F-1466511717"><span>localized</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1049134860%2FProperties%2F-1466511717"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the Accept plugin app.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-unknown/index.html#-1049134860%2FProperties%2F-1466511717">localizedMessage</a><span class="token operator">: </span><span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1539716597%2FFunctions%2F-1466511717" anchor-label="isInstalled" id="1539716597%2FFunctions%2F-1466511717" data-filterable-set=":accept/release"></a>
+<a data-name="1824300659%2FProperties%2F-1466511717" anchor-label="message" id="1824300659%2FProperties%2F-1466511717" data-filterable-set=":accept/release"></a>
           <div class="table-row table-row_content" data-filterable-current=":accept/release" data-filterable-set=":accept/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="is-installed.html"><span>is</span><wbr></wbr><span><span>Installed</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1539716597%2FFunctions%2F-1466511717"></span>
+                  <div><a href="../-unknown/index.html#1824300659%2FProperties%2F-1466511717"><span><span>message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1824300659%2FProperties%2F-1466511717"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-installed.html"><span class="token function">isInstalled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlin/Boolean///PointingToDeclaration/">Boolean</span></div><div class="brief "><p class="paragraph">Returns whether the Accept plugin app is installed on this device.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-unknown/index.html#1824300659%2FProperties%2F-1466511717">message</a><span class="token operator">: </span><span data-unresolved-link="kotlin/String///PointingToDeclaration/">String</span><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="958891723%2FFunctions%2F-1466511717" anchor-label="logout" id="958891723%2FFunctions%2F-1466511717" data-filterable-set=":accept/release"></a>
+<a data-name="-775050045%2FProperties%2F-1466511717" anchor-label="stackTrace" id="-775050045%2FProperties%2F-1466511717" data-filterable-set=":accept/release"></a>
           <div class="table-row table-row_content" data-filterable-current=":accept/release" data-filterable-set=":accept/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="logout.html"><span><span>logout</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="958891723%2FFunctions%2F-1466511717"></span>
+                  <div><a href="../-unknown/index.html#-775050045%2FProperties%2F-1466511717"><span>stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-775050045%2FProperties%2F-1466511717"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="logout.html"><span class="token function">logout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Logs the merchant out of the plugin app, if installed.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="../-unknown/index.html#-775050045%2FProperties%2F-1466511717">stackTrace</a><span class="token operator">: </span><span data-unresolved-link="kotlin/Array///PointingToDeclaration/">Array</span><span class="token operator">&lt;</span><span class="token keyword">out </span><span data-unresolved-link="java.lang/StackTraceElement///PointingToDeclaration/">StackTraceElement</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1992240797%2FFunctions%2F-1466511717" anchor-label="status" id="-1992240797%2FFunctions%2F-1466511717" data-filterable-set=":accept/release"></a>
+<a data-name="2141506092%2FProperties%2F-1466511717" anchor-label="suppressed" id="2141506092%2FProperties%2F-1466511717" data-filterable-set=":accept/release"></a>
           <div class="table-row table-row_content" data-filterable-current=":accept/release" data-filterable-set=":accept/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="status.html"><span><span>status</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1992240797%2FFunctions%2F-1466511717"></span>
+                  <div><a href="../-unknown/index.html#2141506092%2FProperties%2F-1466511717"><span><span>suppressed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2141506092%2FProperties%2F-1466511717"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="status.html"><span class="token function">status</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.tapaya.accept.domain.data/-plugin-status/index.html">PluginStatus</a></div><div class="brief "><p class="paragraph">Returns the plugin's current <a href="../../com.tapaya.accept.domain.data/-plugin-status/index.html">PluginStatus</a> (installed/authenticated/ready-for-payments state).</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="770790366%2FFunctions%2F-1466511717" anchor-label="updateInfo" id="770790366%2FFunctions%2F-1466511717" data-filterable-set=":accept/release"></a>
-          <div class="table-row table-row_content" data-filterable-current=":accept/release" data-filterable-set=":accept/release">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="update-info.html"><span>update</span><wbr></wbr><span><span>Info</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="770790366%2FFunctions%2F-1466511717"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="update-info.html"><span class="token function">updateInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.tapaya.accept.domain.data/-plugin-update-info/index.html">PluginUpdateInfo</a></div><div class="brief "><p class="paragraph">Returns whether a newer version of the Accept plugin app is available.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":accept/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-unknown/index.html#2141506092%2FProperties%2F-1466511717">suppressed</a><span class="token operator">: </span><span data-unresolved-link="kotlin/Array///PointingToDeclaration/">Array</span><span class="token operator">&lt;</span><span class="token keyword">out </span><span data-unresolved-link="kotlin/Throwable///PointingToDeclaration/">Throwable</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
