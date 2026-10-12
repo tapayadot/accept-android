@@ -13,6 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.17.0] - 2026-10-12
+
+### Added
+- `CustomerFacingFlipConfig` on `AcceptPayments.setOptions` and `AcceptPayments.pay`, controlling
+  whether the companion rotates the payment UI 180° when the merchant turns the device toward the
+  customer. `Disabled` turns it off for hardware that is already customer-facing, such as a fixed
+  POS, a dual-sided panel, or a device in a stand. On those the turn never happens and the motion
+  sensors only produce accidental flips. Defaults to `Automatic`, which is the existing behavior;
+  a companion build that predates the option ignores it.
+
+### Changed
+
+### Fixed
+- `AcceptPlugin.activateTerminal()` throws `PluginUnavailable`, as documented, when the plugin
+  is not installed or cannot handle activation. It returned
+  `ActivateTerminalResult.Failed(UNKNOWN)` instead, after needlessly generating a handover code.
+
 ## [1.16.0] - 2026-09-30
 
 ### Added
