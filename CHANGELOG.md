@@ -13,6 +13,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.18.0] - 2026-10-14
+
+### Added
+- `NfcPositionConfig.ExternalReader` takes an optional `indicator: ReaderIndicator`, telling the
+  companion which screen edge (`ReaderEdge`) the external reader sits beyond and where along it
+  (`offsetFraction`, 0 to 1). The tap screen then shows animated chevrons pointing at the reader,
+  for kiosks and docks where the reader is outside the screen. Null keeps today's behavior, and a
+  companion build that predates the option ignores it.
+
+### Changed
+
+### Fixed
+
 ## [1.17.0] - 2026-10-12
 
 ### Added
@@ -386,7 +399,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.15.0...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.18.0...HEAD
+[1.18.0]: https://github.com/tapayadot/accept-android/compare/1.17.0...1.18.0
+[1.17.0]: https://github.com/tapayadot/accept-android/compare/1.16.0...1.17.0
+[1.16.0]: https://github.com/tapayadot/accept-android/compare/1.15.0...1.16.0
 [1.15.0]: https://github.com/tapayadot/accept-android/compare/1.14.2...1.15.0
 [1.14.2]: https://github.com/tapayadot/accept-android/compare/1.14.1...1.14.2
 [1.14.1]: https://github.com/tapayadot/accept-android/compare/1.14.0...1.14.1
