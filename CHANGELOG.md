@@ -13,6 +13,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.19.0] - 2026-10-17
+
+### Added
+
+### Changed
+- `AcceptAuth.authenticate()` uses the device id owned by the companion app when it reports one,
+  so every host app on a device, and a host app reinstalled after an uninstall, is the same
+  device on the backend. The stored id, then a new random one, are used only while no companion
+  can answer. A companion build that predates this reports no id, and the SDK behaves as before.
+- `PluginStatus.MerchantMismatch` (and `PluginMerchantMismatch`) are also reported when the
+  companion is activated for a different device, not only a different merchant. The remedy is the
+  same: `logout()`, then activate again. Devices are compared only once the SDK has authenticated.
+
+### Fixed
+
 ## [1.18.0] - 2026-10-14
 
 ### Added
@@ -399,7 +414,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.18.0...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.19.0...HEAD
+[1.19.0]: https://github.com/tapayadot/accept-android/compare/1.18.0...1.19.0
 [1.18.0]: https://github.com/tapayadot/accept-android/compare/1.17.0...1.18.0
 [1.17.0]: https://github.com/tapayadot/accept-android/compare/1.16.0...1.17.0
 [1.16.0]: https://github.com/tapayadot/accept-android/compare/1.15.0...1.16.0
