@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.19.1] - 2026-10-19
+
+### Fixed
+- Terminal activation could reject a valid activation code when the SDK authenticated before the
+  companion was installed.
+
 ## [1.19.0] - 2026-10-17
 
 ### Added
@@ -414,7 +420,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.19.0...HEAD
+[Unreleased]: https://github.com/tapayadot/accept-android/compare/1.19.1...HEAD
+[1.19.1]: https://github.com/tapayadot/accept-android/compare/1.19.0...1.19.1
 [1.19.0]: https://github.com/tapayadot/accept-android/compare/1.18.0...1.19.0
 [1.18.0]: https://github.com/tapayadot/accept-android/compare/1.17.0...1.18.0
 [1.17.0]: https://github.com/tapayadot/accept-android/compare/1.16.0...1.17.0
