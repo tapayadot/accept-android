@@ -13,6 +13,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.20.0] - 2026-10-29
+
+### Added
+- `AcceptPluginPackages` exposes the package names of the Accept plugin (`PRODUCTION`, `SANDBOX`,
+  and `ALL`), so a device-policy controller can add the plugin to Android's lock-task allowlist
+  with `DevicePolicyManager.setLockTaskPackages`. Declaring the packages in a manifest only makes
+  them visible to package queries; it does not authorize lock-task.
+- **accept-nfc:** new optional artifact, `com.tapaya:accept-nfc`. `Accept.nfc` opens tag sessions
+  on the device's own reader: read and write Mifare Classic, Type 2 (Ultralight, NTAG) and ISO-DEP
+  tags, without the plugin. Needs `Accept.initialize`, not an authenticated merchant. Phones use
+  Android NFC.
+- **accept-nfc-sunmi:** new optional artifact, `com.tapaya:accept-nfc-sunmi`, for Sunmi P-series
+  terminals, which have no Android NFC: tag sessions go through Sunmi's pay service. It embeds
+  Sunmi PayLib and asks only for `com.sunmi.perm.CONTACTLESS_CARD`.
+
+### Changed
+- `AcceptPayments.pay()` takes the contactless reader back from an open NFC tag session before the
+  plugin reads the card; the session ends with `TagSessionEndReason.PAYMENT`.
+- The published AAR is now minified and obfuscated. The public API (`Accept`, the `Accept*`
+  facades, `domain.data`, the exception hierarchy) is unchanged; everything under
+  `com.tapaya.accept.internal` is renamed and was never supported API. Java code that reached
+  into those classes directly will no longer compile.
+
+### Fixed
+- A response carrying an enum value the SDK does not know yet no longer fails to decode as a
+  whole. The backend can add a value, such as a new `PaymentProcessorEnum` member, before the SDK's
+  production contract has it, and onboarding status used to fail for every merchant that had it.
+  Fields the SDK only filters on skip the unknown value. Business type, onboarding state and
+  payment state still fail with a `Result.failure`, as before, because their public enums have no
+  unknown member. No public API change.
+
 ## [1.19.1] - 2026-10-19
 
 ### Fixed

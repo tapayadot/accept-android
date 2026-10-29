@@ -323,6 +323,10 @@ $dokka.location:com.tapaya.accept/AcceptPlugin/isInstalled/#/PointingToDeclarati
 $dokka.location:com.tapaya.accept/AcceptPlugin/logout/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/logout.html
 $dokka.location:com.tapaya.accept/AcceptPlugin/status/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/status.html
 $dokka.location:com.tapaya.accept/AcceptPlugin/updateInfo/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin/update-info.html
+$dokka.location:com.tapaya.accept/AcceptPluginPackages///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin-packages/index.html
+$dokka.location:com.tapaya.accept/AcceptPluginPackages/ALL/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin-packages/-a-l-l.html
+$dokka.location:com.tapaya.accept/AcceptPluginPackages/PRODUCTION/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin-packages/-p-r-o-d-u-c-t-i-o-n.html
+$dokka.location:com.tapaya.accept/AcceptPluginPackages/SANDBOX/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-plugin-packages/-s-a-n-d-b-o-x.html
 $dokka.location:com.tapaya.accept/AcceptSdk///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/index.html
 $dokka.location:com.tapaya.accept/AcceptSdk/deviceId/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/device-id.html
 $dokka.location:com.tapaya.accept/AcceptSdk/isProduction/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-accept-sdk/is-production.html
