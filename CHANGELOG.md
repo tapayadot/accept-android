@@ -13,6 +13,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.21.0] - 2026-11-06
+
+### Added
+- `AcceptPluginPackages.SUNMI_PRODUCTION` and `SUNMI_SANDBOX`: the PCI PTS plugin for certified Sunmi
+  P3 terminals, `com.tapaya.accept.sunmi.plugin[.sandbox]`. `ALL` includes them.
+
+### Changed
+- The SDK talks to whichever plugin is installed, softPOS or Sunmi PTS. A certified terminal
+  prefers PTS.
+- `install()` opens the Sunmi store's PTS listing on a certified terminal that has the Sunmi
+  store, even when Play is present too. Any other Sunmi device without Play now opens the Sunmi
+  store's softPOS listing instead of downloading the APK. A certified terminal still running the old
+  PTS build under the softPOS package is offered the PTS plugin too.
+- `updateInfo()` measures a softPOS plugin installed from the Sunmi store against the backend
+  release metadata. An installed PTS plugin reports `Unknown`.
+
+### Fixed
+
 ## [1.20.0] - 2026-10-29
 
 ### Added
