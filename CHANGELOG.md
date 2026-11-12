@@ -13,6 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [1.21.1] - 2026-11-12
+
+### Changed
+- `activateTerminal()` no longer requests an activation code before it opens the plugin. The
+  plugin requests the terminal's code itself, for the terminal type it drives and, on a Sunmi
+  terminal, its serial number. `NoTidsAvailableForMerchant` is deprecated and no longer thrown; the
+  plugin reports a missing terminal on its own activation screen.
+
+### Fixed
+- `activateTerminal()` with the Sunmi PTS plugin no longer fails with `NoTidsAvailableForMerchant`
+  before the plugin even opens.
+
 ## [1.21.0] - 2026-11-06
 
 ### Added

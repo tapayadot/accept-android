@@ -365,7 +365,6 @@ $dokka.location:com.tapaya.accept/MerchantOnboardingIncomplete///PointingToDecla
 $dokka.location:com.tapaya.accept/MerchantOnboardingIncomplete/MerchantOnboardingIncomplete/#com.tapaya.accept.domain.data.OnboardingState/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-merchant-onboarding-incomplete/-merchant-onboarding-incomplete.html
 $dokka.location:com.tapaya.accept/MerchantOnboardingIncomplete/state/#/PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-merchant-onboarding-incomplete/state.html
 $dokka.location:com.tapaya.accept/NoInternetConnection///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-no-internet-connection/index.html
-$dokka.location:com.tapaya.accept/NoTidsAvailableForMerchant///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-no-tids-available-for-merchant/index.html
 $dokka.location:com.tapaya.accept/NotAuthenticated///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-not-authenticated/index.html
 $dokka.location:com.tapaya.accept/NotInitialized///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-not-initialized/index.html
 $dokka.location:com.tapaya.accept/PaymentCreationFailed///PointingToDeclaration/-accept -s-d-k/com.tapaya.accept/-payment-creation-failed/index.html
